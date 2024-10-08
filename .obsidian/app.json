@@ -1,0 +1,26 @@
+{
+  "promptDelete": false,
+  "livePreview": false,
+  "vimMode": true,
+  "propertiesInDocument": "source",
+  "showLineNumber": true,
+  "newFileLocation": "current",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "static/images",
+  "userIgnoreFilters": [
+    "archetypes/",
+    "assets/",
+    "data/",
+    "layouts/",
+    "templates/",
+    "public/",
+    "static/",
+    "content/blog/_index.md",
+    "content/_index.md",
+    "content/editorials/_index.md",
+    "content/projects/_index.md",
+    "content/research/_index.md",
+    "content/writeups/_index.md"
+  ]
+}

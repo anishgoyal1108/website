@@ -1,0 +1,20 @@
+{
+  "hidden": true,
+  "hiddenList": [
+    "assets",
+    "archetypes",
+    "layouts",
+    "public",
+    "hugo.toml",
+    "README.md",
+    "data",
+    "static/android-chrome-192x192.png",
+    "static/apple-touch-icon.png",
+    "static/android-chrome-512x512.png",
+    "static/favicon.ico",
+    "static/favicon-16x16.png",
+    "static/site.webmanifest",
+    "static/favicon-32x32.png",
+    "templates"
+  ]
+}

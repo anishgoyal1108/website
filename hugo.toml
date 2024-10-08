@@ -5,6 +5,7 @@ title = "Anish Goyal"
 copyright = "© 2024 Anish Goyal"
 enableEmoji = true
 rssLimit = 25
+ignoreFiles = [ ".obsidian", "templates" ]
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = false
@@ -40,9 +41,6 @@ research = "/research/:slug/"
 tags = "/tags/:slug"
 
 [blackfriday]
-smartypants = true
-fractions = true
-smartDashes = true
 plainIDAnchors = true
 
 [markup.goldmark.extensions.passthrough]

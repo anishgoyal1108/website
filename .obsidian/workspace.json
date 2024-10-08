@@ -1,0 +1,118 @@
+{
+  "main": {
+    "id": "579cc2b2099a45ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "548a08c8962a431b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "881944cd9773678a",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1312f29f769f6455",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2663dfc0dd31990",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e22c467f215b123",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2cdad1a7ac98ff67",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "49001d2adc6f0a47",
+    "type": "split",
+    "children": [],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "templater-obsidian:Templater": true,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "2cdad1a7ac98ff67",
+  "lastOpenFiles": [
+    "Untitled.md",
+    "templates/main.md",
+    "content/blog/hello-world.md.md",
+    "content/blog/Untitled.md",
+    "content/editorials/Untitled.md",
+    "content/editorials/_index.md",
+    "content/blog/_index.md",
+    "content/editorials/Markdown Syntax Guide.md",
+    "static/android-chrome-192x192.png",
+    "static/images/worley_signing.gif",
+    "public/apple-touch-icon.png",
+    "public/favicon-32x32.png",
+    "public/index.xml",
+    "public/sitemap.xml",
+    "public/index.html",
+    "public/editorials/page/1/index.html",
+    "public/editorials/markdown-syntax-guide/index.html",
+    "public/editorials/page/1",
+    "public/editorials/page",
+    "public/editorials/markdown-syntax-guide",
+    "public/editorials/index.xml",
+    "public/editorials/index.html",
+    "public/images/worley_signing.gif",
+    "public/images/website-old.gif",
+    "public/images/spellingbee.png",
+    "public/images/reveng.png",
+    "public/images/etc.png",
+    "public/images/asm-server.png",
+    "content/editorials/markdown.md",
+    "writeups/Test.md",
+    "_index.md",
+    "Welcome.md",
+    "projects/_index.md",
+    "research/_index.md",
+    "blog/_index.md",
+    "writeups/_index.md",
+    "editorials/_index.md"
+  ]
+}
