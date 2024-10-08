@@ -26,7 +26,7 @@ After graduating, I competed in various CTF competitions with my previous team, 
 
 Over the summer, I attended the [Jane Street Academy of Math and Programming](https://www.janestreet.com/join-jane-street/programs-and-events/amp/) (AMP), a 5-week summer program hosted in NYC, with a rigorous curriculum focused on computer science, combinatorics, and number theory. Meeting like-minded rising college freshmen and learning from professors from various R1 research institutions and seasoned traders at Jane Street was the final push that inspired me to pursue a career in academia.
 
-After AMP, I flew to Las Vegas to compete at [B-Sides Las Vegas](https://bsideslv.org/), where my team placed 1st in the Pros vs. Joes CTF. I also attended the [DEF CON](https://www.defcon.org/) security conference, where I competed at [DEF CON CTF](https://www.defcon.org/html/links/dc-ctf.html) and the Radio Hacking Village Capture the Flag with a team of professional hackers from [Dark Wolf Solutions](https://www.darkwolfsolutions.com/), placing 4th and 3rd, respectively. I also attended talks on quantum computing and cryptography, which further solidified my interest in those fields from a research perspective.
+After AMP, I flew to Las Vegas to compete at B-Sides Las Vegas, where my team placed 1st in [Pros vs. Joes CTF](www.prosversusjoes.net). I also attended the [DEF CON](https://www.defcon.org/) security conference, where I competed in Red Team Village CTF and Radio Hacking Village CTF with a team of professional hackers from [Dark Wolf Solutions](https://www.darkwolfsolutions.com/), placing 4th and 3rd, respectively. I also attended talks on quantum computing and cryptography, which further solidified my interest in those fields from a research perspective.
 
 ### `cat interests.txt` 
 #### Research
@@ -34,7 +34,7 @@ When I'm not working on coursework, I'm doing [research](/research) in quantum c
 - How ultra-cold atoms manipulated by lasers and magnetic fields can be used to create quantum interferometry devices for rotation sensors and gyroscopes (related video on quantum interferometry [here](https://www.youtube.com/watch?v=bFM9HHB9JXI))
 - Applying [Zeckendorf's theorem](https://en.wikipedia.org/wiki/Zeckendorf%27s_theorem) to higher orders and exploring the properties of generalized Zeckendorf expansions, which are used in number theory to represent integers as sums of Fibonacci numbers
 - [The Rogers-Ramanujan-Slater Database](https://rrsdb.github.io/index.html), an online collection of q-series product signatures relating to the Rogers-Ramanujan/Rogers-Slater identities, which are used to study partitions of natural numbers
-- Continuing my high school research on [biomimetic propulsion systems](https://github.com/anishgoyal1108/Undulatory-Swimming-A-Topological-and-Computational-Model) for autonomous underwater vehicles by conducting more experiments and incorporating LIDAR technology/computer vision to improve navigation
+- Continuing my high school research on biomimetic propulsion systems for autonomous underwater vehicles by conducting more experiments and incorporating LIDAR technology/computer vision to improve navigation
 - ConcreteNet: a convolutional neural network architecture that specializes in detecting and classifying structural deformities in concrete via ground-penetrating radar scans 
 
 #### STEM Outreach
