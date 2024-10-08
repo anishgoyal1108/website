@@ -53,6 +53,11 @@ And of course, I enjoy making posts on my [blog](/blog). I share my thoughts on 
 
 If you are interested in any of the above, feel free to check it out! <br>
 
+### Contact Me
+Feel free to reach out to me on any of the following platforms:
+
+{{< social-media >}}
+
 ### `<EOF>`
 Thanks for visiting my website.<br>
 Subscribe to my [RSS feed](/index.xml) to stay up-to-date on any new posts!
