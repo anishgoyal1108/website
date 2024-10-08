@@ -1,0 +1,21 @@
+{{ define "main" }}
+  <section id="projects">
+    <h2 style="margin-top: -32px; margin-bottom: 10px; text-align: center;">{{ .Title }}</h2>
+    <div class="card-container">
+      {{ range .Site.Data.projects }}
+        <div class="card">
+          <img src="{{ .img }}">
+          <div class="card-content">
+            <h3>
+              <a href="{{ .url }}">{{ .name }}</a>
+            </h3>
+            <div class="reading">
+              <p>{{ .date }}</p>
+            </div>
+            <p>{{ .desc }}</p>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,81 @@
+{{ define "main" }}
+
+<content>
+  {{ if not (eq .Title "tags")}}
+    {{ if .Data.Singular }}
+      <h3>Filtering for "{{ .Title }}"</h3>
+      <small>
+        <a href="{{ relURL "blog" }}">Remove filter</a>
+      </small>
+    {{ else }}
+      <h2 style="margin-top: 15px; text-align: center;"> {{ .Title | title }} </h2>
+      <br>
+    {{ end }}
+  {{ end }}
+  
+  {{ if or .Paginator.HasPrev .Paginator.HasNext }}
+    {{- partial "pagination.html" . -}}
+  {{ end }}
+  {{ range .Paginator.Pages }}
+  
+  <article>
+    <div class="reading" style="margin-bottom: 1.0em; font-size: 0.55em;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <p style="margin: 0; text-align: left;">
+          <span class="material-icons">calendar_today</span>
+          <time datetime="{{ .Date.Format "2006-01-02" }}" pubdate>
+            {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+          </time>
+          &nbsp;
+          <span class="material-icons">article</span>
+          {{ .WordCount }} words 
+          &nbsp;
+          <span class="material-icons">access_time</span>
+          {{ .Params.readingtime }} min
+          &nbsp;
+          <span class="material-icons">replay</span> Modified
+          <time datetime="{{ .Lastmod.Format "2006-01-02" }}">
+            {{ .Lastmod.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+          </time>
+        </p>
+  
+        <p style="font-size: 1em; text-align: right;">
+          {{ range (.GetTerms "tags") }}
+            <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>&nbsp;&nbsp;
+          {{ end }}
+        </p>
+      </div>
+    </div>
+
+    <a href="{{ .RelPermalink }}">
+      <h1 class="article-title", style="font-size: 1.25em; margin-bottom: 0.2em;">{{ .Title }}</h1>
+    </a>
+    <h2 style="font-size: 0.9em; font-style: italic;">{{ .Params.eyeCatcher }}</h2>
+  </article>
+  {{ else }}
+    <ul>
+      <li>No posts yet</li>
+    </ul>
+  {{ end }}
+  {{ if not .Data.Singular }}
+  <small>
+    <div>
+      {{ $currentDir := .Page.File.Dir }}  <!-- Get the current directory -->
+      {{ range .Site.Taxonomies.tags }}
+        <!-- Filter tags to only include pages in the current directory -->
+        {{ $hasPostsInDir := false }}
+        {{ range .Pages }}
+          {{ if in .File.Dir $currentDir }}
+            {{ $hasPostsInDir = true }}
+          {{ end }}
+        {{ end }}
+        {{ if $hasPostsInDir }}
+          <a href="{{ .Page.RelPermalink }}">#{{ .Page.LinkTitle }}</a>&nbsp;&nbsp;
+        {{ end }}
+      {{ end }}
+    </div>
+  </small>
+  {{ end }}
+</content>
+
+{{ end }}

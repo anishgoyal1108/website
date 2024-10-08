@@ -1,0 +1,71 @@
+- name: Personal Website Overhaul
+  date: October 6, 2024
+  desc: Minimalistic website built with HTML, CSS, and JS using Hugo as a static site generator, featuring a synchronized Obsidian Vault over GitHub Actions for automatic deployment of blog posts and cybersecurity competition write-ups to an AWS web server.
+  img: /images/website.gif
+  url: https://github.com/anishgoyal1108/website
+
+- name: Camel Up
+  date: August 1, 2024
+  desc: A Python-based implementation of the Camel Up board game, featuring betting, dice rolling, and strategic EV-based gameplay for two players. 
+  img: /images/camel-up.webp
+  url: https://github.com/anishgoyal1108/Camel-Up
+
+- name: Jane Street Electronic Trading Competition Bots
+  date: July 25, 2024
+  desc: Trading bots developed for the Jane Street Electronic Trading Challenge, leveraging arbitrage, pennying, and bond strategies to maximize profits in a simulated securities market. 
+  img: /images/etc.png 
+  url: https://github.com/anishgoyal1108/AMP-ETC
+
+- name: Basic x86 ASM Web Server
+  date: May 24, 2024
+  desc: Simplistic x86 Assembly web server utilizing Linux syscalls, demonstrating HTTP protocol handling, TCP/IP networking, process management with fork(), and low-level file and socket operations. 
+  img: /images/asm-server.png
+  url: https://github.com/anishgoyal1108/Basic-x86-ASM-Web-Server
+
+- name: Personal Website (old)
+  date: March 27, 2024 
+  desc: My old personal website, which showcasing social media links but proved difficult to maintain; I transitioned to a minimalistic static site using Hugo for better performance, security, and ease of content management.
+  img: /images/website-old.gif
+  url: https://github.com/anishgoyal1108/website-old
+
+- name: Online Spelling Bee Synthesizer
+  date: March 21, 2024
+  desc: A web application that leverages Google Sheets, Google Apps Scripts, Google Cloud TTS API, and a Flask backend to provide automated pronunciation and definitions for spelling words, for use in an actual spelling bee environment. 
+  img: /images/spellingbee.png 
+  url: https://github.com/anishgoyal1108/spellingbee-synthesizer
+
+- name: CyberDragons Reverse Engineering Workshop
+  date: March 1, 2024
+  desc: Reverse engineering workshop built with CTFd, Docker, and Nginx, designed to teach cybersecurity through hands-on challenges involving binary analysis and exploitation.
+  img: /images/reveng.png
+  url: https://github.com/anishgoyal1108/RevEng-Workshop
+
+- name: CyberDragons OWASP5 Workshop
+  date: February 9, 2024
+  desc: Hands-on cybersecurity workshop featuring a head-to-head competition using the OWASP Juice Shop. This project automates user account creation and virtual machine provisioning, allowing participants to exploit vulnerabilities in a realistic web application security environment through Apache Guacamole. 
+  img: /images/owasp5.png 
+  url: https://github.com/anishgoyal1108/OWASP5-Workshop
+
+- name: Cyberpunk Arch Linux Desktop Rice
+  date: January 1, 2024
+  desc: A visually striking Arch Linux rice featuring a "light" cyberpunk aesthetic, complete with audio visualizers, system monitoring tools, and customizable weather and Spotify integration.
+  img: /images/rice.png
+  url: https://github.com/anishgoyal1108/rice
+
+- name: CyberDragons PowerShell and Bash Murder Mystery Koan
+  date: November 10, 2023 
+  desc: A highly interactive programming challenge designed to teach PowerShell and Bash scripting through an engaging murder mystery scenario. 
+  img: /images/koan.png
+  url: https://github.com/anishgoyal1108/PowerShell-and-Bash-Murder-Mystery-Koan
+
+- name: CyberPatriot Aperture Science Practice Image Bundle
+  date: September 1, 2023
+  desc: A bundle of practice images I created to prepare my school for the CyberPatriot competition based on the Portal and Half-Life video game franchises by Valve.  
+  img: /images/aperture.png
+  url: https://github.com/anishgoyal1108/Aperture-Science-Practice-Image-Bundle
+
+- name: Lava Run
+  date: June 27, 2023
+  desc: A simplistic game where you have to escape rising lava while avoiding randomly generated obstacles. 
+  img: /images/lava-run.gif
+  url: https://github.com/anishgoyal1108/Lava-Run

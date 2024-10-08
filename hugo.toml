@@ -1,0 +1,112 @@
+# Basic config
+baseURL = "https://anishgoyal.com"
+languageCode = "en-us"
+title = "Anish Goyal"
+copyright = "© 2024 Anish Goyal"
+enableEmoji = true
+rssLimit = 25
+
+# Generate a nice robots.txt for SEO
+enableRobotsTXT = false
+
+# https://github.com/gohugoio/hugo/issues/12152
+capitalizeListTitles = false
+
+# Generate "Bearblog"-like URLs !only!, see https://bearblog.dev/.
+# disableKinds = ["taxonomy"]
+# ignoreErrors = ["error-disable-taxonomy"]
+
+[params]
+title = "Anish Goyal"
+description = "Anish Goyal's Website"
+dateFormat = "January 2, 2006"
+hideMadeWithLine = true
+hideRSSLink = false
+math = true
+
+[params.author]
+name = "Anish Goyal"
+email = "anishgoyal1108@gmail.com"
+
+[taxonomies]
+tag = "tags"
+
+[permalinks]
+blog = "/blog/:slug/"
+writeups = "/writeups/:slug/"
+editorials = "/editorials/:slug/"
+projects = "/projects/:slug/"
+research = "/research/:slug/"
+tags = "/tags/:slug"
+
+[blackfriday]
+smartypants = true
+fractions = true
+smartDashes = true
+plainIDAnchors = true
+
+[markup.goldmark.extensions.passthrough]
+  enable = true
+
+[markup.goldmark.extensions.passthrough.delimiters]
+  block = [['$$', '$$']]
+  inline = [['$', '$']]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 3
+
+[markup.highlight]
+lineNos = true
+lineNumbersInTable = false
+noClasses = true
+style = "catppuccin-mocha"
+
+[[menu.main]]
+name = "🏠 Home"
+pageRef = "/"
+weight = 10
+
+[[menu.main]]
+name = "🔬 Research"
+pageRef = "/research"
+weight = 20
+
+[[menu.main]]
+name = "📚 Projects"
+pageRef = "/projects"
+weight = 80
+
+[[menu.main]]
+name = "📝 Blog"
+pageRef = "/blog"
+weight = 15
+
+[[menu.main]]
+name = "🥷 Writeups"
+pageRef = "/writeups"
+weight = 50
+
+[[menu.main]]
+name = "✍️ Editorials"
+pageRef = "/editorials"
+weight = 60
+
+[[menu.main]]
+name = "🏷️ Tags"
+pageRef = "/tags"
+weight = 100
+
+[outputs]
+# Generate RSS for home only.
+home = ["html", "rss"]
+section = ["html", "rss"]
+taxonomy = ["html"]
+term = ["html"]
+
+[frontmatter]
+date = ["created", "date"]
+lastmod = ["modified", "lastmod"]

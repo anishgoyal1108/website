@@ -1,0 +1,17 @@
+- name: "Undulatory Swimming: A Topological and Computational Model"
+  date: "October 2023 - April 2024"
+  desc: "An energy-efficient biomimetic submersible with an autonomous propulsion system trained on Zebrafish electrocardiograph data."
+  img: /images/undulatory.png 
+  url: "https://github.com/anishgoyal1108/Undulatory-Swimming-A-Topological-and-Computational-Model"
+
+- name: "Wireless Online Real-time Language Expression Yielder"
+  date: "July 1, 2023 - July 15, 2023"
+  desc: "A robot hand that can finger spell American Sign Language (ASL) in real time using spoken input from an app."
+  img: /images/worley_signing.gif
+  url: "https://github.com/anishgoyal1108/worley"
+
+- name: "A Comparison of Supervised Algorithms for Predicting Urban Crime"
+  date: "October 2021 - February 2022"
+  desc: "This project evaluates the effectiveness of various supervised learning algorithms—Decision Trees, Random Forests, Naive Bayes Classifiers, Support Vector Machines, and Logistic Regression—in predicting urban crime rates in Atlanta, aiming to identify the most accurate model for resource allocation in law enforcement."
+  img: /images/crime.webp
+  url: "https://github.com/anishgoyal1108/A-Comparison-of-Supervised-Algorithms-for-Predicting-Urban-Crime"

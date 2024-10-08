@@ -1,0 +1,62 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Hugo setup
+        uses: peaceiris/actions-hugo@v3.0.0
+        with:
+          hugo-version: latest
+          extended: false
+          
+      - name: Build
+        run: hugo --environment production
+        
+      - name: Deploy via Rsync Deployments Action
+        uses: Burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --delete
+          path: public/
+          remote_path: ${{ secrets.REMOTE_PATH }}
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.DEPLOY_KEY }}
+
+      - name: Create SSH key file
+        run: |
+          echo "${{ secrets.DEPLOY_KEY }}" > ssh_key
+          chmod 600 ssh_key
+
+      - name: Restart NGINX
+        run: |
+          ssh -o StrictHostKeyChecking=no -i ssh_key ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} 'sudo systemctl restart nginx'
+
+      - name: Test Success
+        uses: rjstone/discord-webhook-notify@v1
+        if: success()
+        with:
+          severity: info
+          details: Website deployment successful!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          
+      - name: Test Failure
+        uses: rjstone/discord-webhook-notify@v1
+        if: failure()
+        with:
+          severity: error
+          details: Website deployment failed!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          
+      - name: Test Canceled
+        uses: rjstone/discord-webhook-notify@v1
+        if: cancelled()
+        with:
+          severity: warn
+          details: Warning while deploying website!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
