@@ -3,6 +3,8 @@ node_modules/
 public/
 resources/
 .vscode/
+.obsidian/appearance.json
+.obsidian/workspace.json
 
 .DS_Store
 .hugo_build.lock
