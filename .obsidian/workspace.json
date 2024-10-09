@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "548a08c8962a431b",
+        "id": "ec3435e0e6912da4",
         "type": "tabs",
         "children": [
           {
-            "id": "881944cd9773678a",
+            "id": "322d8cb30f084c62",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "templates/main.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": true
+              }
             }
           }
         ]
@@ -75,9 +80,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2cdad1a7ac98ff67",
+  "active": "322d8cb30f084c62",
   "lastOpenFiles": [
-    "Untitled.md",
+    "content/editorials/breaking-down-the-inequality.md",
+    "public/tags/proof/page/1/index.html",
+    "public/tags/proof/page/1",
+    "public/tags/proof/page",
+    "public/tags/proof/index.html",
+    "public/tags/proof",
+    "public/editorials/breaking-down-the-inequality/index.html",
+    "public/editorials/breaking-down-the-inequality",
     "templates/main.md",
     "content/blog/hello-world.md.md",
     "content/blog/Untitled.md",
@@ -92,13 +104,6 @@
     "public/index.xml",
     "public/sitemap.xml",
     "public/index.html",
-    "public/editorials/page/1/index.html",
-    "public/editorials/markdown-syntax-guide/index.html",
-    "public/editorials/page/1",
-    "public/editorials/page",
-    "public/editorials/markdown-syntax-guide",
-    "public/editorials/index.xml",
-    "public/editorials/index.html",
     "public/images/worley_signing.gif",
     "public/images/website-old.gif",
     "public/images/spellingbee.png",

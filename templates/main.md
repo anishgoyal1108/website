@@ -2,16 +2,16 @@
 const title = await tp.system.prompt("Title?"); 
 const formattedTitle = title.replace(/[^\w\s]/gi, '').replace(/\s+/g, '-').toLowerCase();
 type = await tp.system.prompt("Type?");
-await tp.file.move(`content/${type}/${formattedTitle}.md`);
+await tp.file.move(`content/${type}/${formattedTitle}`);
 -%>
 ---
-author: Anish Goyal
-title: <% title %>
-description: 
-summary: 
-eyeCatcher: 
+author: "Anish Goyal"
+title: "<% title %>"
+description: "" 
+summary: ""
+eyeCatcher: "" 
 tags: []
-readingtime: 
+readingtime: ""
 ---
 <%*
 tp.hooks.on_all_templates_executed(() => {

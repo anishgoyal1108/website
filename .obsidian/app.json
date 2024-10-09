@@ -22,5 +22,6 @@
     "content/projects/_index.md",
     "content/research/_index.md",
     "content/writeups/_index.md"
-  ]
+  ],
+  "useTab": false
 }
