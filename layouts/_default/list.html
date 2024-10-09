@@ -60,9 +60,9 @@
   {{ if not .Data.Singular }}
   <small>
     <div>
-      {{ $currentDir := .Page.File.Dir }}  <!-- Get the current directory -->
+      {{ if .Page.File }}
+      {{ $currentDir := .Page.File.Dir }}
       {{ range .Site.Taxonomies.tags }}
-        <!-- Filter tags to only include pages in the current directory -->
         {{ $hasPostsInDir := false }}
         {{ range .Pages }}
           {{ if in .File.Dir $currentDir }}
@@ -73,6 +73,7 @@
           <a href="{{ .Page.RelPermalink }}">#{{ .Page.LinkTitle }}</a>&nbsp;&nbsp;
         {{ end }}
       {{ end }}
+    {{ end }}
     </div>
   </small>
   {{ end }}
