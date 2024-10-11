@@ -32,10 +32,11 @@ After AMP, I flew to Las Vegas to compete at B-Sides Las Vegas, where my team pl
 #### Research
 When I'm not working on coursework, I'm doing [research](/research) in quantum computing, machine learning, and mathematics. Currently, I'm working on the following projects:
 - How ultra-cold atoms manipulated by lasers and magnetic fields can be used to create quantum interferometry devices for rotation sensors and gyroscopes (related video on quantum interferometry [here](https://www.youtube.com/watch?v=bFM9HHB9JXI))
+- A Kolmogorov-Arnold Neural Network for predicting the reliability of power electronic converters in inverter-based photovoltaic systems, leveraging a decade of real-world data to reduce maintenance costs for large-scale integration of solar energy in power grids
 - Applying [Zeckendorf's theorem](https://en.wikipedia.org/wiki/Zeckendorf%27s_theorem) to higher orders and exploring the properties of generalized Zeckendorf expansions, which are used in number theory to represent integers as sums of Fibonacci numbers
+- ConcreteNet: a convolutional neural network architecture that specializes in detecting and classifying structural deformities in concrete via ground-penetrating radar scans
 - [The Rogers-Ramanujan-Slater Database](https://rrsdb.github.io/index.html), an online collection of q-series product signatures relating to the Rogers-Ramanujan/Rogers-Slater identities, which are used to study partitions of natural numbers
 - Continuing my high school research on biomimetic propulsion systems for autonomous underwater vehicles by conducting more experiments and incorporating LIDAR technology/computer vision to improve navigation
-- ConcreteNet: a convolutional neural network architecture that specializes in detecting and classifying structural deformities in concrete via ground-penetrating radar scans 
 
 #### STEM Outreach
 Other than research, I am passionate about sharing my knowledge with others and advancing equity in STEM education. When I was in high school, I revived *CyberDragons*, my school's cybersecurity club, and led my peers to excel in cybersecurity competitions through interactive weekly workshops. I also worked closely with Girls Who Code to host workshops on computer science topics at elementary/middle schools and create an all-girls cybersecurity team. In the near future, I hope to become a content creator and produce high-quality videos that teach quantum computing and cybersecurity concepts to a broader audience.
