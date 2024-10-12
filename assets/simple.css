@@ -2,7 +2,6 @@
 @import url('https://unpkg.com/@catppuccin/palette@0.1.4/css/catppuccin.css');
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 
-
 /* Global variables. */
 :root,
 ::backdrop {
@@ -11,26 +10,66 @@
   --mono-font: "Fira Mono", Consolas, Menlo, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   --standard-border-radius: 5px;
 
-  /* Colors */
-  --bg: #10101A;
-  --accent-bg: var(--ctp-mocha-crust);
-  --text: var(--ctp-mocha-text);
-  --text-light: var(--ctp-mocha-subtext1);
-  --border: var(--ctp-mocha-overlay0);
-  --accent: #F14369;
-  --accent-hover: #F14369;
-  --accent-text: var(--ctp-mocha-subtext1);
-  --code: var(--ctp-mocha-subtext1);
-  --preformatted: var(--ctp-mocha-subtext1);
-  --marked: #F14369;
-  --disabled: var(--ctp-mocha-overlay1);
-  --purple: #CBA6F7;
-  
-  /* Add a bit of transparency so light media isn't so glaring in dark background */
-    img,
-    video {
-      opacity: 0.8;
-    }
+  /* Default (light) theme */
+  --bg: #fff;
+  --accent-bg: #f5f7ff;
+  --text: #212121;
+  --text-light: #585858;
+  --border: #898EA4;
+  --accent: #0d47a1;
+  --accent-hover: #1266e2;
+  --accent-text: var(--bg);
+  --code: #d81b60;
+  --preformatted: #444;
+  --marked: #ffdd33;
+  --disabled: #efefef;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root,
+  ::backdrop {
+    color-scheme: dark;
+    --bg: #10101A;
+    --accent-bg: var(--ctp-mocha-crust);
+    --text: var(--ctp-mocha-text);
+    --text-light: var(--ctp-mocha-subtext1);
+    --border: var(--ctp-mocha-overlay0);
+    --accent: #F14369;
+    --accent-hover: #F14369;
+    --accent-text: var(--ctp-mocha-subtext1);
+    --code: var(--ctp-mocha-subtext1);
+    --preformatted: var(--ctp-mocha-subtext1);
+    --marked: #F14369;
+    --disabled: var(--ctp-mocha-overlay1);
+    --purple: #CBA6F7;
+  }
+  /* Add a bit of transparency so light media isn't so glaring in dark mode */
+  img,
+  video {
+    opacity: 0.8;
+  }
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+  :root,
+  ::backdrop {
+    color-scheme: light; /* Just for clarity, though it's not strictly necessary */
+    --bg: #10101A; /* Dark mode background */
+    --accent-bg: var(--ctp-mocha-crust); /* Dark mode accent background */
+    --text: var(--ctp-mocha-text); /* Dark mode text color */
+    --text-light: var(--ctp-mocha-subtext1); /* Dark mode light text color */
+    --border: var(--ctp-mocha-overlay0); /* Dark mode border color */
+    --accent: #F14369; /* Dark mode accent color */
+    --accent-hover: #F14369; /* Dark mode accent hover color */
+    --accent-text: var(--ctp-mocha-subtext1); /* Dark mode accent text */
+    --code: var(--ctp-mocha-subtext1); /* Dark mode code color */
+    --preformatted: var(--ctp-mocha-subtext1); /* Dark mode preformatted text */
+    --marked: #F14369; /* Dark mode marked color */
+    --disabled: var(--ctp-mocha-overlay1); /* Dark mode disabled color */
+    --purple: #CBA6F7; /* Dark mode purple */
+  }
 }
 
 /* Reset box-sizing */
