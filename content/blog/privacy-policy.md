@@ -28,9 +28,6 @@ For every request received by my NGINX server, the following information is logg
 
 This is all collected by the NGINX logger, according to the default configuration. My website does not use cookies, scripts, or collect any information outside the scope of this. For those of you that *don't* want your IP address logged, I am working on setting up a site node on the Tor network; for now, you can use a proxy.
 
-### Cusdis Comments
-The comments below each post on my site is powered by [Cusdis](https://cusdis.com/), a lightweight, private, open source commenting framework. All comments on my site are completely anonymized; however, you can (optionally) supply an email address to be notified if anyone responds to your comment.
-
 ## Data Retention
 AWS log entries are kept for three days max. Before they are purged, I may retain `User-Agent` request headers that indicate bot activity.
 

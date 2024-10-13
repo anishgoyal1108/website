@@ -144,6 +144,8 @@ I use [Cusdis](https://cusdis.com/) for the commenting system on my website. Cus
   <script defer>window.CUSDIS_LOCALE = { powered_by: ' ',}</script>
 ```
 
+***EDIT: I had some problems configuring CORS with Cusdis, so comments on posts have been disabled for the foreseeable future.***
+
 ## Front Matter Variables
 I use customized front matter variables in my Hugo content files to provide metadata about each post. These variables include:
 

@@ -47,14 +47,4 @@
 
   <content> {{ .Content }} </content>
   </main>
-  <main>
-    <h4>Comments:</h4>
-    <div id="cusdis_thread" data-host="https://cusdis.com"
-      data-app-id="1ed550fb-922d-4581-9742-8421bf29bd25"
-      data-page-id="{{ .File.UniqueID }}"
-      data-page-url="{{ .Permalink }}"
-      data-page-title="{{ .Title }}"
-      data-theme="dark">
-    <script async src="https://cusdis.com/js/cusdis.es.js"></script>
-    <script defer>window.CUSDIS_LOCALE = { powered_by: ' ',}</script>
 {{ end }}
