@@ -5,7 +5,7 @@ description: "An intriguing problem involving parametric curves and area computa
 summary: "In this blog post, we explore how to find the area of an inner loop in a parametric curve defined by trigonometric functions, using calculus techniques such as integrals and symmetry."
 eyeCatcher: "Can you calculate the area enclosed by one of the inner loops formed by the curve $x(t) = 2 \\cos(t) + \\cos(5t)$ and $y(t) = 2 \\sin(t) + \\sin(5t)$?"
 tags: [math, calculus, parametric-curves, trigonometry, problem-solving]
-readingtime: "10"
+readingtime: "5"
 date: 2024-10-13
 modified: 2024-10-13
 ---
@@ -201,7 +201,7 @@ A &= \frac{9}{2} \tan^{-1} \left( \frac{\sqrt{5 + 2\sqrt{13}}}{3} \right) + 6 \s
 \end{align*}
 $$
 
-## Conclusion
+## `<EOF>`
 Therefore, the area of the region enclosed by one of the inner loops is:
 $$
 A = \frac{9}{2} \tan^{-1}\left(\frac{\sqrt{5 + 2 \sqrt{13}}}{3}\right) - \frac{9(\sqrt{5 + 2 \sqrt{13}})}{7 + \sqrt{13}} \approx 0.9108.

@@ -5,9 +5,9 @@ description: "A challenging inequality proposed is proven by induction."
 summary: "An in-depth exploration of a challenging inequality proposed by Sela Fried, tackled through induction. We break down the problem step by step, revealing how powers of $x$ interact with $(1−x)$ over a specific interval."
 eyeCatcher: "Can you prove that the inequality holds $\\forall n \\ge 2$ if $x \\in \\left[\\frac{3}{5}, 1 \\right]$ and $n \\in \\mathbb{N}$?"
 tags: [math, induction, proof, problem-solving, inequality]
-readingtime: "10"
+readingtime: "8"
 date: 2024-10-08
-modified: 2024-10-10
+modified: 2024-10-13
 ---
 
 ## The Problem
@@ -181,10 +181,10 @@ This is clearly true $\forall \ x \in \left[\frac{3}{5}, 1\right]$, so the secon
 
 Since both parts of the inequality are satisfied, so $p_{k}(x) \ge p_{k+1}(x) \ \forall \ x \in \left[\frac{3}{5}, 1\right]$ **by induction!**
 
-## Conclusion
+## `<EOF>`
 
 The only prerequisites for solving this problem were:
 1. Proof by induction
 2. Basic Calculus I techniques 
 
-This means that an undergraduate student familiar with proofs and taking an introductory calculus course probably have probably solved this problem if they thought about it enough. Pretty inspiring, eh?
+This means that an undergraduate student familiar with proofs and taking an introductory calculus course probably have probably could have solved this problem if they thought about it enough. Pretty inspiring, eh?
