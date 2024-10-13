@@ -28,7 +28,7 @@ After graduating, I competed in various CTF competitions with my previous team, 
 
 Over the summer, I attended the [Jane Street Academy of Math and Programming](https://www.janestreet.com/join-jane-street/programs-and-events/amp/) (AMP), a 5-week summer program hosted in NYC, with a rigorous curriculum focused on computer science, combinatorics, and number theory. Meeting like-minded rising college freshmen and learning from professors from various R1 research institutions and seasoned traders at Jane Street was the final push that inspired me to pursue a career in academia.
 
-After AMP, I flew to Las Vegas to compete at B-Sides Las Vegas, where my team placed 1st in [Pros vs. Joes CTF](www.prosversusjoes.net). I also attended the [DEF CON](https://www.defcon.org/) security conference, where I competed in Red Team Village CTF and Radio Hacking Village CTF with a team of professional hackers from [Dark Wolf Solutions](https://www.darkwolfsolutions.com/), placing 4th and 3rd, respectively. I also attended talks on quantum computing and cryptography, which further solidified my interest in those fields from a research perspective.
+After AMP, I flew to Las Vegas to compete at B-Sides Las Vegas, where my team placed 1st in [Pros vs. Joes CTF](http://prosversusjoes.net). I also attended the [DEF CON](https://www.defcon.org/) security conference, where I competed in Red Team Village CTF and Radio Hacking Village CTF with a team of professional hackers from [Dark Wolf Solutions](https://www.darkwolfsolutions.com/), placing 4th and 3rd, respectively. I also attended talks on quantum computing and cryptography, which further solidified my interest in those fields from a research perspective.
 
 ## `cat interests.txt` 
 ### Research
