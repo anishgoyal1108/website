@@ -4,7 +4,7 @@ title: "Exploring Parametric Curves: Finding the Area of an Inner Loop"
 description: "An intriguing problem involving parametric curves and area computation leads to the discovery of the area enclosed by one of the inner loops of a graph."
 summary: "In this blog post, we explore how to find the area of an inner loop in a parametric curve defined by trigonometric functions, using calculus techniques such as integrals and symmetry."
 eyeCatcher: "Can you calculate the area enclosed by one of the inner loops formed by the curve $x(t) = 2 \\cos(t) + \\cos(5t)$ and $y(t) = 2 \\sin(t) + \\sin(5t)$?"
-tags: [math, calculus, parametric-curves, trigonometry, problem-solving]
+tags: [mathematics, calculus, parametric-curves, trigonometry, problem-solving]
 readingtime: "5"
 date: 2024-10-13
 modified: 2024-10-13

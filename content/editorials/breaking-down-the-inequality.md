@@ -4,7 +4,7 @@ title: "Breaking Down the Inequality"
 description: "A challenging inequality proposed is proven by induction."
 summary: "An in-depth exploration of a challenging inequality proposed by Sela Fried, tackled through induction. We break down the problem step by step, revealing how powers of $x$ interact with $(1−x)$ over a specific interval."
 eyeCatcher: "Can you prove that the inequality holds $\\forall n \\ge 2$ if $x \\in \\left[\\frac{3}{5}, 1 \\right]$ and $n \\in \\mathbb{N}$?"
-tags: [math, induction, proof, problem-solving, inequality]
+tags: [mathematics, induction, proof, problem-solving, inequality]
 readingtime: "8"
 date: 2024-10-08
 modified: 2024-10-13
