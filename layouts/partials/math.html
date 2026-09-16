@@ -1,9 +1,21 @@
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 <script>
   MathJax = {
+    loader: { load: ['[tex]/physics', '[tex]/mathtools', '[tex]/color'] },
     tex: {
       displayMath: [['$$', '$$']],
-      inlineMath: [['$', '$']]
+      inlineMath: [['$', '$']],
+      packages: { '[+]': ['physics', 'mathtools', 'color'] },
+      tags: 'none',
+      processEscapes: true,
+      macros: {
+        coloneqq: '\\mathrel{\\vcenter{:}}=',
+        bf: ['\\mathbf{#1}', 1]
+      }
+    },
+    options: {
+      ignoreHtmlClass: 'tex2jax_ignore',
+      processHtmlClass: 'tex2jax_process|callout-title|internal-link|theorem-callout-subtitle'
     }
   };
 </script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>

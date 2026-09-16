@@ -1,0 +1,23 @@
+{{ define "main" }}
+  {{ partial "article-head.html" . }}
+  <content class="note-body zoomable"> {{ .Content }} </content>
+  {{ with .Params.sources }}
+  <section class="note-sources">
+    <h3>Sources</h3>
+    <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+  </section>
+  {{ end }}
+  {{ $kind := .Params.kind }}
+  {{ $siblings := (where .Parent.RegularPages "Params.kind" $kind).ByWeight }}
+  {{ $prev := "" }}{{ $next := "" }}{{ $found := false }}
+  {{ range $siblings }}
+    {{ if $found }}{{ if eq $next "" }}{{ $next = . }}{{ end }}{{ end }}
+    {{ if eq .RelPermalink $.RelPermalink }}{{ $found = true }}{{ else if not $found }}{{ $prev = . }}{{ end }}
+  {{ end }}
+  <nav class="prev-next">
+    {{ with $prev }}<a class="prev" href="{{ .RelPermalink }}">← {{ .Title }}</a>{{ else }}<span></span>{{ end }}
+    <a class="up" href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>
+    {{ with $next }}<a class="next" href="{{ .RelPermalink }}">{{ .Title }} →</a>{{ else }}<span></span>{{ end }}
+  </nav>
+  {{ partial "graph.html" . }}
+{{ end }}

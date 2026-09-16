@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <content class="notes-index">
+    <h2 style="margin-top: 15px; text-align: center;">{{ .Title }}</h2>
+    {{ .Content }}
+    {{ $groups := .Params.groups }}
+    <div class="notes-filter" role="group" aria-label="Filter by subject">
+      <button type="button" data-group="all" class="active">All</button>
+      {{ range $groups }}<button type="button" data-group="{{ . | urlize }}">{{ . }}</button>{{ end }}
+    </div>
+    {{ range $g := $groups }}
+      {{ $courses := (where $.Sections "Params.group" $g).ByWeight }}
+      {{ with $courses }}
+      <section class="notes-group" data-group="{{ $g | urlize }}">
+        <h3>{{ $g }}</h3>
+        <div class="course-grid">
+          {{ range . }}
+          <a class="course-card" href="{{ .RelPermalink }}">
+            <span class="course-code">{{ if eq .Params.code "Self-study" }}Self-study{{ else }}{{ .Params.code }}{{ end }}</span>
+            <span class="course-title">{{ .Params.course_title }}</span>
+            <span class="course-meta">{{ .Params.term }}
+              {{ with .Params.lectures }} · {{ . }} lecture{{ if ne . 1 }}s{{ end }}{{ end }}
+              {{ with .Params.guides }} · {{ . }} guide{{ if ne . 1 }}s{{ end }}{{ end }}
+              {{ with .Params.concepts }} · {{ . }} concept{{ if ne . 1 }}s{{ end }}{{ end }}</span>
+          </a>
+          {{ end }}
+        </div>
+      </section>
+      {{ end }}
+    {{ end }}
+  </content>
+  {{ $js := resources.Get "notes-filter.js" | minify }}
+  <script defer src="{{ $js.RelPermalink }}"></script>
+{{ end }}

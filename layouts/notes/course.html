@@ -1,0 +1,39 @@
+{{ define "main" }}
+  <div class="frontMatter">
+    <p class="crumbs"><a href="/notes/">Notes</a> › <span>{{ .Params.group }}</span></p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.term }}<h2>{{ . }}</h2>{{ end }}
+  </div>
+  <content class="course-body">
+    {{ .Content }}
+    {{ $lectures := (where .RegularPages "Params.kind" "lecture").ByWeight }}
+    {{ $guides := (where .RegularPages "Params.kind" "guide").ByWeight }}
+    {{ $refs := (where .RegularPages "Params.kind" "reference").ByWeight }}
+    {{ $concepts := (where .RegularPages "Params.kind" "concept").ByTitle }}
+    {{ with $lectures }}
+    <h3>Lectures</h3>
+    <ol class="lecture-list">
+      {{ range . }}<li value="{{ .Params.ordinal }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}
+    </ol>
+    {{ end }}
+    {{ with $guides }}
+    <h3>Study guides</h3>
+    <ul class="note-list">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+    {{ end }}
+    {{ with $refs }}
+    <h3>Reference</h3>
+    <ul class="note-list">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+    {{ end }}
+    {{ with $concepts }}
+    <h3>Concepts</h3>
+    <ul class="note-list concept-list">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}</ul>
+    {{ end }}
+    {{ $sources := slice }}
+    {{ range .RegularPages }}{{ range .Params.sources }}{{ $sources = $sources | append . }}{{ end }}{{ end }}
+    {{ with $sources | uniq | sort }}
+    <h3>Sources</h3>
+    <ul class="source-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    {{ end }}
+  </content>
+  {{ partial "graph.html" . }}
+{{ end }}

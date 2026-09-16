@@ -1,0 +1,49 @@
+<div class="frontMatter">
+  {{ with .Params.course_slug }}
+    {{ $course := $.Site.GetPage (printf "/notes/%s" .) }}
+    <p class="crumbs"><a href="/notes/">Notes</a> › {{ with $course }}<a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}
+      {{ with $.Params.kind }}<span class="kind kind-{{ . }}">{{ if and (eq . "lecture") $.Params.ordinal }}Lecture {{ $.Params.ordinal }}{{ else }}{{ . | title }}{{ end }}</span>{{ end }}</p>
+  {{ end }}
+  <h1>{{ .Title }}</h1>
+  {{ with .Params.eyeCatcher }}<h2>{{ . }}</h2>{{ end }}
+
+  {{ $tags := .GetTerms "tags" }}
+  {{ if $tags }}
+    <div class="org">
+      <ul>
+        {{ range $tags }}
+          <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+
+  <div class="reading">
+    <p>
+      <span class="material-icons">calendar_today</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}" pubdate>
+        {{ .Date.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+      </time>
+      &nbsp;
+      <span class="material-icons">article</span>
+      {{ .WordCount }} words
+      {{ with .Params.readingtime }}
+      &nbsp;
+      <span class="material-icons">access_time</span>
+      {{ . }} min
+      {{ end }}
+      &nbsp;
+      <span class="material-icons">replay</span> Modified
+      <time datetime="{{ .Lastmod.Format "2006-01-02" }}">
+        {{ .Lastmod.Format (default "2006-01-02" .Site.Params.dateFormat) }}
+      </time>
+    </p>
+  </div>
+
+  {{ if .TableOfContents | replaceRE "<nav[^>]*>\\s*</nav>" "" }}
+  <details open>
+    <summary>Table of Contents</summary>
+    {{ .TableOfContents }}
+  </details>
+  {{ end }}
+</div>
