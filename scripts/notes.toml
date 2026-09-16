@@ -76,7 +76,7 @@ subject = "mathematics"
 group = "Mathematics"
 folder = "04. Notes/Undergraduate Courses/MATH 5339"
 [courses.title_overrides]
-"03 idek" = "first-heading"
+"03 idek" = "Transport and Wave Equations"
 
 [[courses]]
 code = "MATH 5441"

@@ -1,0 +1,254 @@
+{
+ "viewBackgroundColor": "#1e1e2e",
+ "currentItemStrokeColor": "#cdd6f4",
+ "currentItemBackgroundColor": "transparent",
+ "gridColor": {
+  "Bold": "rgba(88, 91, 112, 0.6)",
+  "Regular": "rgba(49, 50, 68, 0.7)"
+ },
+ "colorPalette": {
+  "topPicks": {
+   "elementStroke": [
+    "#cdd6f4",
+    "#f38ba8",
+    "#89b4fa",
+    "#a6e3a1",
+    "#f9e2af"
+   ],
+   "elementBackground": [
+    "transparent",
+    "#7e4f65",
+    "#4e618a",
+    "#5b7762",
+    "#817668"
+   ],
+   "canvasBackground": [
+    "#1e1e2e",
+    "#181825",
+    "#11111b",
+    "#313244",
+    "#24273a"
+   ]
+  },
+  "elementStroke": {
+   "text": [
+    "#6c7086",
+    "#9399b2",
+    "#a6adc8",
+    "#bac2de",
+    "#cdd6f4"
+   ],
+   "rosewater": [
+    "#746c74",
+    "#94898e",
+    "#b4a6a8",
+    "#d5c3c2",
+    "#f5e0dc"
+   ],
+   "flamingo": [
+    "#73646e",
+    "#937e85",
+    "#b2989d",
+    "#d2b3b5",
+    "#f2cdcd"
+   ],
+   "pink": [
+    "#746078",
+    "#947894",
+    "#b491b0",
+    "#d5a9cb",
+    "#f5c2e7"
+   ],
+   "mauve": [
+    "#63547e",
+    "#7d699d",
+    "#977dbb",
+    "#b192d9",
+    "#cba6f7"
+   ],
+   "red": [
+    "#734a5f",
+    "#935a71",
+    "#b36a83",
+    "#d37b96",
+    "#f38ba8"
+   ],
+   "maroon": [
+    "#705260",
+    "#8f6673",
+    "#ae7986",
+    "#cc8c99",
+    "#eba0ac"
+   ],
+   "peach": [
+    "#765a52",
+    "#97705f",
+    "#b8866c",
+    "#d99d7a",
+    "#fab387"
+   ],
+   "yellow": [
+    "#766c62",
+    "#968a75",
+    "#b7a788",
+    "#d8c59c",
+    "#f9e2af"
+   ],
+   "green": [
+    "#546d5c",
+    "#698a6d",
+    "#7da87e",
+    "#92c590",
+    "#a6e3a1"
+   ],
+   "teal": [
+    "#4d6c71",
+    "#5f8a8a",
+    "#71a7a3",
+    "#82c5bc",
+    "#94e2d5"
+   ],
+   "sky": [
+    "#496a7a",
+    "#598696",
+    "#69a3b2",
+    "#79c0cf",
+    "#89dceb"
+   ],
+   "sapphire": [
+    "#40627a",
+    "#4d7b96",
+    "#5a94b3",
+    "#67aed0",
+    "#74c7ec"
+   ],
+   "blue": [
+    "#495a80",
+    "#59719e",
+    "#6987bd",
+    "#799edb",
+    "#89b4fa"
+   ],
+   "lavender": [
+    "#5a5e81",
+    "#7176a0",
+    "#878ec0",
+    "#9ea6df",
+    "#b4befe"
+   ]
+  },
+  "elementBackground": {
+   "transparent": "transparent",
+   "surface": [
+    "#11111b",
+    "#181825",
+    "#313244",
+    "#45475a",
+    "#585b70"
+   ],
+   "rosewater": [
+    "#544e5a",
+    "#7f757c",
+    "#aa9c9f",
+    "#d5c3c2",
+    "#f5e0dc"
+   ],
+   "flamingo": [
+    "#534a56",
+    "#7d6d76",
+    "#a89095",
+    "#d2b3b5",
+    "#f2cdcd"
+   ],
+   "pink": [
+    "#54475c",
+    "#7f6881",
+    "#aa89a6",
+    "#d5a9cb",
+    "#f5c2e7"
+   ],
+   "mauve": [
+    "#494060",
+    "#6c5b88",
+    "#8e76b1",
+    "#b192d9",
+    "#cba6f7"
+   ],
+   "red": [
+    "#53394c",
+    "#7e4f65",
+    "#a8657d",
+    "#d37b96",
+    "#f38ba8"
+   ],
+   "maroon": [
+    "#513e4e",
+    "#7a5867",
+    "#a37280",
+    "#cc8c99",
+    "#eba0ac"
+   ],
+   "peach": [
+    "#554344",
+    "#816156",
+    "#ad7f68",
+    "#d99d7a",
+    "#fab387"
+   ],
+   "yellow": [
+    "#554f4e",
+    "#817668",
+    "#ac9d82",
+    "#d8c59c",
+    "#f9e2af"
+   ],
+   "green": [
+    "#404f4b",
+    "#5b7762",
+    "#769e79",
+    "#92c590",
+    "#a6e3a1"
+   ],
+   "teal": [
+    "#3c4f58",
+    "#537679",
+    "#6b9d9b",
+    "#82c5bc",
+    "#94e2d5"
+   ],
+   "sky": [
+    "#394e5d",
+    "#4e7383",
+    "#649aa9",
+    "#79c0cf",
+    "#89dceb"
+   ],
+   "sapphire": [
+    "#34485e",
+    "#456a84",
+    "#568caa",
+    "#67aed0",
+    "#74c7ec"
+   ],
+   "blue": [
+    "#394461",
+    "#4e618a",
+    "#6480b3",
+    "#799edb",
+    "#89b4fa"
+   ]
+  },
+  "canvasBackground": {
+   "base": "#1e1e2e",
+   "mantle": "#181825",
+   "crust": "#11111b",
+   "surface0": "#313244",
+   "surface1": "#45475a",
+   "macchiato": "#24273a",
+   "frappe": "#303446",
+   "latte": "#eff1f5",
+   "white": "#ffffff",
+   "transparent": "transparent"
+  }
+ }
+}
