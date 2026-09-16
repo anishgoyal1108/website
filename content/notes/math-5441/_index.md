@@ -1,8 +1,8 @@
 ---
-title: "MATH 5441: Theory of Interest"
+title: "MATH 5441: Financial Mathematics"
 layout: "course"
 code: "MATH 5441"
-course_title: "Theory of Interest"
+course_title: "Financial Mathematics"
 subject: "mathematics"
 group: "Mathematics"
 term: "Fall 2025"
