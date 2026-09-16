@@ -38,12 +38,10 @@ class Ctx:
 
 def _split_wikilink(inner: str) -> tuple[str, str | None, str | None]:
     """'Target#frag|alias' -> (target, frag, alias). Handles the table-escaped \\| alias."""
-    inner = inner.replace("\\|", "\x01")
+    inner = inner.replace("\\|", "|")   # tables escape the alias pipe as \|
     alias = None
     if "|" in inner:
         inner, alias = inner.split("|", 1)
-        alias = alias.replace("\x01", "|")
-    inner = inner.replace("\x01", "|")
     frag = None
     if "#" in inner:
         inner, frag = inner.split("#", 1)

@@ -188,6 +188,8 @@ def resolve_note(vault: Vault, target: str, from_note: Note | None) -> Note | No
         n = vault.by_path.get(t + ".md")
         if n:
             return n
+        if (vault.cfg.vault / (t + ".md")).is_file():
+            return None  # a real vault path that is not published
         t = t.rsplit("/", 1)[1]
     cands = vault.by_name.get(t.lower(), [])
     if not cands:

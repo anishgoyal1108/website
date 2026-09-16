@@ -17,6 +17,17 @@ jobs:
           
       - name: Build
         run: hugo --environment production
+
+      - name: Write denylist
+        if: ${{ secrets.NOTES_DENYLIST != '' }}
+        env:
+          NOTES_DENYLIST: ${{ secrets.NOTES_DENYLIST }}
+        run: printf '%s\n' "$NOTES_DENYLIST" > "$RUNNER_TEMP/denylist.txt"
+
+      - name: Check public
+        env:
+          WEBSITE_SYNC_DENYLIST: ${{ runner.temp }}/denylist.txt
+        run: python3 scripts/check_public.py
         
       - name: Deploy via Rsync Deployments Action
         uses: Burnett01/rsync-deployments@7.0.1
