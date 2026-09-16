@@ -40,9 +40,12 @@
     {{ if .Param "math" }}
       {{ partialCached "math.html" . }}
     {{ end }}
+    {{ $lightbox := resources.Get "lightbox.js" | minify }}
+    <script defer src="{{ $lightbox.RelPermalink }}"></script>
   </head>
 
   <body>
+    {{ partialCached "callout-icons.html" . }}
     <header>
       {{ partial "header.html" . }}
     </header>

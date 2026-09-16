@@ -54,7 +54,7 @@ class Media:
             attrs.append(f'width="{width}"')
         if height:
             attrs.append(f'height="{height}"')
-        return f'<img {" ".join(attrs)}>'
+        return f'<a class="zoom" href="/notes/img/{dest}"><img {" ".join(attrs)}></a>'
 
     def copy_images(self):
         if self.dry_run:
@@ -82,8 +82,8 @@ class Media:
         width = ""
         if alias and re.match(r"^\d+(x\d+)?$", alias.strip()):
             width = f' width="{alias.strip().split("x")[0]}"'
-        return (f'<figure class="excalidraw"><img src="/notes/excalidraw/{slug}.svg" alt="{html.escape(base, quote=True)}" '
-                f'loading="lazy"{width}></figure>')
+        return (f'<figure class="excalidraw"><a class="zoom" href="/notes/excalidraw/{slug}.svg">'
+                f'<img src="/notes/excalidraw/{slug}.svg" alt="{html.escape(base, quote=True)}" loading="lazy"{width}></a></figure>')
 
 
 def is_image_name(name: str) -> bool:

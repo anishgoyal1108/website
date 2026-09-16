@@ -75,6 +75,7 @@ class Citations:
                 return f'<span class="cite cite-embed">Source: {src_html}{pg}</span>', plain
             return f'<span class="cite cite-ref">{src_html}</span>', plain
         if alias:
-            cls = "cite cite-quote" if selection else "cite"
-            return f'<cite class="{cls}">{alias} <span class="cite-src">[{src_html}{pg}]</span></cite>', plain
+            if selection:
+                return f'<cite class="cite cite-quote"><q>{alias}</q> <span class="cite-src">[{src_html}{pg}]</span></cite>', plain
+            return f'<cite class="cite">{alias} <span class="cite-src">[{src_html}{pg}]</span></cite>', plain
         return f'<cite class="cite">{src_html}{pg}</cite>', plain
