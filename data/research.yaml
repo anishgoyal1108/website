@@ -22,15 +22,9 @@
   img: /images/bec-phase.png
   url: "https://arxiv.org/abs/2411.06585"
 
-- name: "Undulatory Swimming: A Topological and Computational Model"
-  date: "October 2023 - April 2024"
-  desc: "An energy-efficient biomimetic submersible with an autonomous propulsion system trained on Zebrafish electrocardiograph data."
-  img: /images/undulatory.png
-  url: "https://github.com/anishgoyal1108/Undulatory-Swimming-A-Topological-and-Computational-Model"
-
 - name: "Wireless Online Real-time Language Expression Yielder"
   date: "July 1, 2023 - July 15, 2023"
-  desc: "A robot hand that can finger spell American Sign Language (ASL) in real time using spoken input from an app."
+  desc: "A robot hand that can finger spell American Sign Language in real time using spoken input from an app."
   img: /images/worley_signing.gif
   url: "https://github.com/anishgoyal1108/worley"
 
