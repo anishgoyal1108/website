@@ -6,7 +6,7 @@ course_title: "Operating System Concepts Essentials (Silberschatz)"
 subject: "computer-science"
 group: "Self-study"
 term: "Fall 2025"
-weight: 180
+weight: 170
 outputs:
   - "html"
 lectures: 7

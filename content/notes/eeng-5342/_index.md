@@ -6,7 +6,7 @@ course_title: "Advanced Digital Design"
 subject: "electrical-engineering"
 group: "Electrical Engineering"
 term: "Fall 2025"
-weight: 130
+weight: 120
 outputs:
   - "html"
 lectures: 4

@@ -6,7 +6,7 @@ course_title: "Quantum Computing"
 subject: "physics"
 group: "Physics"
 term: "Spring 2026"
-weight: 150
+weight: 140
 outputs:
   - "html"
 lectures: 13

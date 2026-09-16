@@ -6,7 +6,7 @@ course_title: "A First Course in Analysis (Pedrick)"
 subject: "mathematics"
 group: "Self-study"
 term: "Summer 2025"
-weight: 190
+weight: 180
 outputs:
   - "html"
 lectures: 3

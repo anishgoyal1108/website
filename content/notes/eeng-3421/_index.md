@@ -6,7 +6,7 @@ course_title: "Probability and Statistics for Engineers"
 subject: "electrical-engineering"
 group: "Electrical Engineering"
 term: "Spring 2026"
-weight: 120
+weight: 110
 outputs:
   - "html"
 lectures: 28

@@ -106,15 +106,6 @@ group = "Electrical Engineering"
 folder = "04. Notes/Undergraduate Courses/ENGR 2341"
 
 [[courses]]
-code = "EENG 3340"
-slug = "eeng-3340"
-title = "Embedded Systems"
-term = "Spring 2025"
-subject = "electrical-engineering"
-group = "Electrical Engineering"
-folder = "04. Notes/Undergraduate Courses/EENG 3340"
-
-[[courses]]
 code = "EENG 3341"
 slug = "eeng-3341"
 title = "Microelectronics"

@@ -6,7 +6,7 @@ course_title: "Principles of Physics II"
 subject: "physics"
 group: "Physics"
 term: "Spring 2025"
-weight: 140
+weight: 130
 outputs:
   - "html"
 lectures: 11
