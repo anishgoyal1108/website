@@ -6,6 +6,7 @@ copyright = "© 2026 Anish Goyal"
 enableEmoji = true
 rssLimit = 25
 ignoreFiles = [ ".obsidian", "templates" ]
+timeZone = "America/New_York"
 
 # Generate a nice robots.txt for SEO
 enableRobotsTXT = false
@@ -53,6 +54,10 @@ plainIDAnchors = true
 [markup.goldmark.renderer]
 unsafe = true
 
+[markup.goldmark.parser.attribute]
+title = true
+block = true
+
 [markup.tableOfContents]
 startLevel = 2
 endLevel = 3
@@ -84,6 +89,11 @@ pageRef = "/blog"
 weight = 15
 
 [[menu.main]]
+name = "🎓 Notes"
+pageRef = "/notes"
+weight = 25
+
+[[menu.main]]
 name = "🥷 Writeups"
 pageRef = "/writeups"
 weight = 50
@@ -98,9 +108,15 @@ name = "🏷️ Tags"
 pageRef = "/tags"
 weight = 100
 
+[outputFormats.graph]
+mediaType = "application/json"
+baseName = "graph"
+isPlainText = true
+notAlternative = true
+
 [outputs]
-# Generate RSS for home only.
-home = ["html", "rss"]
+# Generate RSS for home only; graph.json feeds the knowledge graph.
+home = ["html", "rss", "graph"]
 section = ["html", "rss"]
 taxonomy = ["html"]
 term = ["html"]

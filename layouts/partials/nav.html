@@ -10,7 +10,7 @@
     {{ end }}>
     {{ .Name }}
   </a>
-  {{ if eq .URL "/writeups/" }}<br>{{ end }}
+  {{ if eq .URL "/notes/" }}<br>{{ end }}
 {{ end }}
 {{ if not .Site.Params.hideRSSLink }}
   <a href="{{ relURL "index.xml" }}">
