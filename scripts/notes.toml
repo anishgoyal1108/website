@@ -1,0 +1,244 @@
+# Configuration for scripts/sync_notes.py
+# Vault is read-only. Override the path with WEBSITE_VAULT.
+
+[vault]
+path = "/home/anish/Documents/Anish Goyal's Vault"
+image_dirs = ["97. Attachments/Images"]
+excalidraw_dirs = ["97. Attachments/Excalidraw"]
+# Directories scanned for links to published notes (equation numbering counts
+# references vault-wide, like math-booster does). Relative to the vault.
+scan_dirs = ["00. Home", "01. Periodic", "02. Projects", "03. References", "04. Notes", "05. Clippings"]
+
+[exclude]
+frontmatter_keys = ["excalidraw-plugin"]
+# Applied only to filenames without a leading ordinal.
+filename_patterns = ['^(HW|Homework|Quiz|Test|Exam)\b', '\b(HW|Quiz|Practice|Work)$', '^goyal', '^Week \d+']
+
+[groups]
+order = ["Mathematics", "Electrical Engineering", "Physics", "Self-study"]
+
+[parity]
+# math-booster (LaTeX-like Theorem & Equation Referencer v2.2.0) profile "English"
+strip_leading_zeros = false
+proof_end = ""
+number_examples = true
+equation_numbers_only_when_referenced = true
+cross_note_prefix = " > "
+lightbox = true
+hover_zoom = true
+# `[!theorem|*]` in math-booster means "unnumbered"; a callout becomes the note's
+# main theorem only with a `%% main %%` comment. Set true to treat `|*` as main.
+star_marks_main = false
+
+[[courses]]
+code = "MATH 2130"
+slug = "math-2130"
+title = "Discrete Mathematics"
+term = "Spring 2025"
+subject = "mathematics"
+group = "Mathematics"
+folder = "04. Notes/Undergraduate Courses/MATH 2130"
+
+[[courses]]
+code = "MATH 2160"
+slug = "math-2160"
+title = "Linear Algebra"
+term = "Summer 2026"
+subject = "mathematics"
+group = "Mathematics"
+folder = "04. Notes/Undergraduate Courses/MATH 2160"
+pinned = ["2160 Compendium"]
+
+[[courses]]
+code = "MATH 2243"
+slug = "math-2243"
+title = "Calculus III"
+term = "Summer 2026"
+subject = "mathematics"
+group = "Mathematics"
+folder = "04. Notes/Undergraduate Courses/MATH 2243"
+
+[[courses]]
+code = "MATH 4890"
+slug = "math-4890"
+title = "Fourier Analysis"
+term = "Fall 2024"
+subject = "mathematics"
+group = "Mathematics"
+folder = "04. Notes/Undergraduate Courses/MATH 4190"
+
+[[courses]]
+code = "MATH 5339"
+slug = "math-5339"
+title = "Partial Differential Equations"
+term = "Fall 2025"
+subject = "mathematics"
+group = "Mathematics"
+folder = "04. Notes/Undergraduate Courses/MATH 5339"
+[courses.title_overrides]
+"03 idek" = "first-heading"
+
+[[courses]]
+code = "MATH 5441"
+slug = "math-5441"
+title = "Theory of Interest"
+term = "Fall 2025"
+subject = "mathematics"
+group = "Mathematics"
+folder = "04. Notes/Undergraduate Courses/MATH 5441"
+
+[[courses]]
+code = "ENGR 2334"
+slug = "engr-2334"
+title = "Electric Circuits I"
+term = "Spring 2025"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/ENGR 2334"
+
+[[courses]]
+code = "ENGR 2341"
+slug = "engr-2341"
+title = "Signals and Systems"
+term = "Spring 2025"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/ENGR 2341"
+
+[[courses]]
+code = "EENG 3340"
+slug = "eeng-3340"
+title = "Embedded Systems"
+term = "Spring 2025"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/EENG 3340"
+
+[[courses]]
+code = "EENG 3341"
+slug = "eeng-3341"
+title = "Microelectronics"
+term = "Fall 2025"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/EENG 3341"
+
+[[courses]]
+code = "EENG 3345"
+slug = "eeng-3345"
+title = "AC Circuit Analysis"
+term = "Summer 2025"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/EENG 3345"
+
+[[courses]]
+code = "EENG 3421"
+slug = "eeng-3421"
+title = "Probability and Statistics for Engineers"
+term = "Spring 2026"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/EENG 3421"
+
+[[courses]]
+code = "EENG 5342"
+slug = "eeng-5342"
+title = "Advanced Digital Design"
+term = "Fall 2025"
+subject = "electrical-engineering"
+group = "Electrical Engineering"
+folder = "04. Notes/Undergraduate Courses/EENG 5342"
+
+[[courses]]
+code = "PHYS 2212"
+slug = "phys-2212"
+title = "Principles of Physics II"
+term = "Spring 2025"
+subject = "physics"
+group = "Physics"
+folder = "04. Notes/Undergraduate Courses/PHYS 2212"
+
+[[courses]]
+code = "PHYS 3571"
+slug = "phys-3571"
+title = "Quantum Computing"
+term = "Spring 2026"
+subject = "physics"
+group = "Physics"
+folder = "04. Notes/Undergraduate Courses/PHYS 3571"
+
+[[courses]]
+code = "Self-study"
+slug = "electric-circuits"
+title = "Fundamentals of Electric Circuits (Sadiku)"
+term = "Summer 2025"
+subject = "electrical-engineering"
+group = "Self-study"
+folder = "04. Notes/Fundamentals of Electric Circuits"
+
+[[courses]]
+code = "Self-study"
+slug = "photonics"
+title = "Fundamentals of Photonics (Saleh & Teich)"
+term = "Summer 2026"
+subject = "physics"
+group = "Self-study"
+folder = "04. Notes/Fundamentals of Photonics"
+
+[[courses]]
+code = "Self-study"
+slug = "operating-systems"
+title = "Operating System Concepts Essentials (Silberschatz)"
+term = "Fall 2025"
+subject = "computer-science"
+group = "Self-study"
+folder = "04. Notes/Operating Systems Concepts Essentials"
+
+[[courses]]
+code = "Self-study"
+slug = "analysis"
+title = "A First Course in Analysis (Pedrick)"
+term = "Summer 2025"
+subject = "mathematics"
+group = "Self-study"
+folder = "04. Notes/A First Course in Analysis"
+
+# PDF citation map: the PDFs themselves are never copied; links become citations.
+[textbooks."Calc3w.pdf"]
+title = "Calculus III"
+authors = "Marsden & Weinstein"
+[textbooks."Electric Circuits Fundamentals 7th Ed.pdf"]
+title = "Fundamentals of Electric Circuits"
+authors = "Alexander & Sadiku"
+edition = "7th ed."
+[textbooks."A First Course in Analysis.pdf"]
+title = "A First Course in Analysis"
+authors = "Pedrick"
+[textbooks."A Basic Course in the Theory of Interest and Derivative Markets.pdf"]
+title = "A Basic Course in the Theory of Interest and Derivatives Markets"
+authors = "Finan"
+[textbooks."Probability and Stochastic Processes-1.pdf"]
+title = "Probability and Stochastic Processes"
+authors = "Yates & Goodman"
+[textbooks."Introduction to Classical and Quantum Computing.pdf"]
+title = "Introduction to Classical and Quantum Computing"
+authors = "Wong"
+[textbooks."Fundamentals of Photonics.pdf"]
+title = "Fundamentals of Photonics"
+authors = "Saleh & Teich"
+[textbooks."Operating System Concepts Essentials.pdf"]
+title = "Operating System Concepts Essentials"
+authors = "Silberschatz, Galvin & Gagne"
+[textbooks."Intro to Ophthalmic Optics.pdf"]
+title = "Introduction to Ophthalmic Optics"
+authors = "Course handout"
+[textbooks."Introduction to Visual Optics: A Light Approach.pdf"]
+title = "Introduction to Visual Optics: A Light Approach"
+authors = "Course handout"
+[textbooks."MIPS reference sheet.pdf"]
+title = "MIPS reference sheet"
+authors = "Course handout"
+[textbooks."Cyclic Quadrilaterals.pdf"]
+title = "Cyclic Quadrilaterals"
+authors = "Course handout"
