@@ -1,6 +1,6 @@
 {{- $nodes := slice -}}
 {{- $ids := dict -}}
-{{- $pages := where .Site.RegularPages "Section" "in" (slice "notes" "blog" "writeups" "editorials") -}}
+{{- $pages := where .Site.RegularPages "Section" "in" (slice "notes" "blog" "writeups") -}}
 {{- range $pages -}}
   {{- $type := cond (eq .Section "notes") "note" "post" -}}
   {{- $nodes = $nodes | append (dict "id" .RelPermalink "title" .Title "type" $type "section" .Section "group" (default .Section .Params.course_slug)) -}}

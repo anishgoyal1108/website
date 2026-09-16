@@ -36,7 +36,6 @@ tag = "tags"
 [permalinks]
 blog = "/blog/:slug/"
 writeups = "/writeups/:slug/"
-editorials = "/editorials/:slug/"
 projects = "/projects/:slug/"
 research = "/research/:slug/"
 tags = "/tags/:slug"
@@ -99,8 +98,8 @@ pageRef = "/writeups"
 weight = 50
 
 [[menu.main]]
-name = "✍️ Editorials"
-pageRef = "/editorials"
+name = "🧠 Mindmap"
+pageRef = "/graph"
 weight = 60
 
 [[menu.main]]

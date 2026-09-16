@@ -18,7 +18,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-PUBLIC = REPO / "public"
+PUBLIC = Path(os.environ.get("PUBLIC_DIR", REPO / "public"))
 DENYLIST = Path(os.environ.get("WEBSITE_SYNC_DENYLIST", Path.home() / ".config" / "website-sync" / "denylist.txt"))
 HONORIFIC = re.compile(r"\b(?:Dr|Prof|Professor)\.?\s+[A-Z][a-z]+")
 
@@ -89,7 +89,7 @@ def main() -> int:
                 parser.feed(text)
                 pages[p] = parser
                 body = html.unescape("".join(parser.text))
-                if rel.startswith(("notes/", "blog/", "writeups/", "editorials/")):
+                if rel.startswith(("notes/", "blog/", "writeups/")):
                     for m in HONORIFIC.finditer(body):
                         failures.append(f"honorific: {m.group(0)!r} in {rel}")
                 if rel.startswith("notes/") and ("[[" in body or "]]" in body):

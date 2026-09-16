@@ -1,5 +1,5 @@
 ---
-title: "Knowledge Graph"
+title: "🧠 Mindmap"
 description: "Every note, post, course and tag on this site, and how they link to each other."
 layout: graph
 outputs: ["html"]
