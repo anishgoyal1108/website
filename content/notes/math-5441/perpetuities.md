@@ -33,6 +33,6 @@ $$a_{\left< \infty \right> } = \lim_{ n \to \infty } a_{\left< n \right> } = \li
 
 $$\ddot a_{\left< \infty \right> } = \lim_{ n \to \infty } \ddot a_{\left< n \right> } = (1+i) \lim_{ n \to \infty } \frac{1 - (1 + i)^{-n}}{i} = \frac{1+i}{i}=\frac{1}{d}$$
 
-<a class="zoom" href="/notes/img/perpetuity-example-probelm.png"><img src="/notes/img/perpetuity-example-probelm.png" alt="Perpetuity example probelm" loading="lazy"></a>
+<a class="zoom" href="/notes/img/perpetuity-example-problem.png"><img src="/notes/img/perpetuity-example-problem.png" alt="perpetuity example problem" loading="lazy"></a>
 
 <a class="zoom" href="/notes/img/perpetuity-second-example-problem.png"><img src="/notes/img/perpetuity-second-example-problem.png" alt="Perpetuity second example problem" loading="lazy"></a>

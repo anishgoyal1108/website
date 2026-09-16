@@ -14,6 +14,11 @@ frontmatter_keys = ["excalidraw-plugin"]
 # Applied only to filenames without a leading ordinal.
 filename_patterns = ['^(HW|Homework|Quiz|Test|Exam)\b', '\b(HW|Quiz|Practice|Work)$', '^goyal', '^Week \d+']
 
+# Images that replace a vault image on the site only (vault stays untouched).
+# key: vault basename as embedded in the note; value: file under scripts/overrides/img/
+[image_overrides]
+"Perpetuity example probelm.png" = "perpetuity example problem.png"
+
 [groups]
 order = ["Mathematics", "Electrical Engineering", "Physics", "Self-study"]
 

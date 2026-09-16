@@ -7,9 +7,10 @@ import shutil
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from .config import Config
+from .config import SCRIPTS, Config
 from .vault import IMAGE_EXT, Vault, slugify
 
+OVERRIDES = SCRIPTS / "overrides" / "img"
 PASTED_RE = re.compile(r"^(pasted image \d+|[0-9a-f]{8}-[0-9a-f]{4}-|\{[0-9A-F-]{36}\}|screenshot|image ?\d*)", re.I)
 
 
@@ -26,7 +27,17 @@ class Media:
     # ------------------------------------------------------------------ images
     def image(self, name: str, alias: str | None, in_table: bool = False) -> str:
         base = name.rsplit("/", 1)[-1]
-        src = self.vault.images.get(base.lower())
+        override = self.cfg.image_overrides.get(base)
+        if override:
+            src = OVERRIDES / override
+            if not src.is_file():
+                self.report.add("missing image overrides", override)
+                src = None
+            else:
+                base = override
+                self.report.add("image overrides applied", f"{name} -> {override}")
+        else:
+            src = self.vault.images.get(base.lower())
         if src is None:
             self.report.add("missing images", base)
             return f'<em class="missing-media">(image unavailable: {html.escape(base)})</em>'
@@ -39,7 +50,8 @@ class Media:
                 k += 1
             dest = f"{slugify(stem)}-{k}.{ext.lower()}"
         self.images_used[dest] = src
-        self.report.add("copied images", f"{dest} <- {src.relative_to(self.cfg.vault).as_posix()}")
+        origin = src.relative_to(self.cfg.vault).as_posix() if src.is_relative_to(self.cfg.vault) else f"overrides/{src.name}"
+        self.report.add("copied images", f"{dest} <- {origin}")
         width = height = None
         alt = "" if PASTED_RE.match(stem) else stem
         if alias:

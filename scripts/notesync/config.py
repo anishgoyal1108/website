@@ -52,6 +52,7 @@ class Config:
     parity: dict
     courses: list[Course]
     textbooks: dict[str, Textbook]
+    image_overrides: dict[str, str]
     content_dir: Path = REPO / "content" / "notes"
     static_img: Path = REPO / "static" / "notes" / "img"
     static_excalidraw: Path = REPO / "static" / "notes" / "excalidraw"
@@ -89,4 +90,5 @@ def load(path: Path | None = None) -> Config:
         parity=raw.get("parity", {}),
         courses=courses,
         textbooks=textbooks,
+        image_overrides=raw.get("image_overrides", {}),
     )
