@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <content class="graph-page">
+    <h2 style="margin-top: 15px; text-align: center;">{{ .Title }}</h2>
+    {{ .Content }}
+  </content>
+  {{ partial "graph.html" (dict "page" . "mode" "global") }}
+{{ end }}

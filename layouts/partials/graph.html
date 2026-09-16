@@ -1,0 +1,20 @@
+{{ $mode := "local" }}{{ $page := . }}
+{{ if reflect.IsMap . }}{{ $mode = default "local" .mode }}{{ $page = .page }}{{ end }}
+<section class="graph-panel graph-{{ $mode }}" data-mode="{{ $mode }}" data-current="{{ $page.RelPermalink }}" data-src="/graph.json">
+  <div class="graph-head">
+    <h3>{{ if eq $mode "global" }}Knowledge graph{{ else }}Graph{{ end }}</h3>
+    <div class="graph-tools">
+      {{ if eq $mode "local" }}
+      <button type="button" data-depth="1" class="active" title="Direct neighbours">1</button>
+      <button type="button" data-depth="2" title="Neighbours of neighbours">2</button>
+      <a href="/graph/" title="Open the global graph">global ↗</a>
+      {{ else }}
+      <label><input type="checkbox" data-toggle="tags" checked> tags</label>
+      {{ end }}
+    </div>
+  </div>
+  <div class="graph-canvas"></div>
+</section>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+{{ $js := resources.Get "graph.js" | minify }}
+<script defer src="{{ $js.RelPermalink }}"></script>

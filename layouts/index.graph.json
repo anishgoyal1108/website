@@ -1,0 +1,44 @@
+{{- $nodes := slice -}}
+{{- $ids := dict -}}
+{{- $pages := where .Site.RegularPages "Section" "in" (slice "notes" "blog" "writeups" "editorials") -}}
+{{- range $pages -}}
+  {{- $type := cond (eq .Section "notes") "note" "post" -}}
+  {{- $nodes = $nodes | append (dict "id" .RelPermalink "title" .Title "type" $type "section" .Section "group" (default .Section .Params.course_slug)) -}}
+  {{- $ids = merge $ids (dict .RelPermalink true) -}}
+{{- end -}}
+{{- $courses := where .Site.Pages "Params.layout" "course" -}}
+{{- range $courses -}}
+  {{- $nodes = $nodes | append (dict "id" .RelPermalink "title" .Title "type" "course" "section" "notes" "group" .Params.group) -}}
+  {{- $ids = merge $ids (dict .RelPermalink true) -}}
+{{- end -}}
+{{- range .Site.Taxonomies.tags -}}
+  {{- $nodes = $nodes | append (dict "id" .Page.RelPermalink "title" (printf "#%s" .Page.Title) "type" "tag" "section" "tags" "group" "tags") -}}
+  {{- $ids = merge $ids (dict .Page.RelPermalink true) -}}
+{{- end -}}
+{{- $links := slice -}}
+{{- $seen := dict -}}
+{{- range $pages -}}
+  {{- $src := .RelPermalink -}}
+  {{- $targets := slice -}}
+  {{- range .Params.links -}}{{- $targets = $targets | append . -}}{{- end -}}
+  {{- if ne .Section "notes" -}}
+    {{- range findRE `\]\((/[^)#"' ]+)` .RawContent -}}
+      {{- $t := . | strings.TrimPrefix "](" -}}
+      {{- if not (hasSuffix $t "/") -}}{{- $t = printf "%s/" $t -}}{{- end -}}
+      {{- $targets = $targets | append $t -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with .Params.course_slug -}}{{- $targets = $targets | append (printf "/notes/%s/" .) -}}{{- end -}}
+  {{- range .GetTerms "tags" -}}{{- $targets = $targets | append .RelPermalink -}}{{- end -}}
+  {{- range $targets -}}
+    {{- $t := . -}}
+    {{- if and (index $ids $t) (ne $t $src) -}}
+      {{- $key := printf "%s|%s" $src $t -}}
+      {{- if not (index $seen $key) -}}
+        {{- $seen = merge $seen (dict $key true) -}}
+        {{- $links = $links | append (dict "source" $src "target" $t) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- dict "nodes" $nodes "links" $links | jsonify -}}
