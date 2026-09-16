@@ -50,15 +50,6 @@ folder = "04. Notes/Undergraduate Courses/MATH 2160"
 pinned = ["2160 Compendium"]
 
 [[courses]]
-code = "MATH 2243"
-slug = "math-2243"
-title = "Calculus III"
-term = "Summer 2026"
-subject = "mathematics"
-group = "Mathematics"
-folder = "04. Notes/Undergraduate Courses/MATH 2243"
-
-[[courses]]
 code = "MATH 4890"
 slug = "math-4890"
 title = "Fourier Analysis"

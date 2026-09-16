@@ -6,7 +6,7 @@ course_title: "Partial Differential Equations"
 subject: "mathematics"
 group: "Mathematics"
 term: "Fall 2025"
-weight: 50
+weight: 40
 outputs:
   - "html"
 lectures: 3

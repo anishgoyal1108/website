@@ -6,7 +6,7 @@ course_title: "Signals and Systems"
 subject: "electrical-engineering"
 group: "Electrical Engineering"
 term: "Spring 2025"
-weight: 80
+weight: 70
 outputs:
   - "html"
 lectures: 24

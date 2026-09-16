@@ -6,7 +6,7 @@ course_title: "Microelectronics"
 subject: "electrical-engineering"
 group: "Electrical Engineering"
 term: "Fall 2025"
-weight: 90
+weight: 80
 outputs:
   - "html"
 lectures: 9

@@ -6,7 +6,7 @@ course_title: "AC Circuit Analysis"
 subject: "electrical-engineering"
 group: "Electrical Engineering"
 term: "Summer 2025"
-weight: 100
+weight: 90
 outputs:
   - "html"
 lectures: 11

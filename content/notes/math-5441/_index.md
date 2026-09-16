@@ -6,7 +6,7 @@ course_title: "Financial Mathematics"
 subject: "mathematics"
 group: "Mathematics"
 term: "Fall 2025"
-weight: 60
+weight: 50
 outputs:
   - "html"
 lectures: 26

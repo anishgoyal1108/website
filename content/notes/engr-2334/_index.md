@@ -6,7 +6,7 @@ course_title: "Electric Circuits I"
 subject: "electrical-engineering"
 group: "Electrical Engineering"
 term: "Spring 2025"
-weight: 70
+weight: 60
 outputs:
   - "html"
 lectures: 5
