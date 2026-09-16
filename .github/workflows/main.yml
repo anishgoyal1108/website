@@ -19,7 +19,6 @@ jobs:
         run: hugo --environment production
 
       - name: Write denylist
-        if: ${{ secrets.NOTES_DENYLIST != '' }}
         env:
           NOTES_DENYLIST: ${{ secrets.NOTES_DENYLIST }}
         run: printf '%s\n' "$NOTES_DENYLIST" > "$RUNNER_TEMP/denylist.txt"

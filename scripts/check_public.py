@@ -70,7 +70,7 @@ def main() -> int:
     names = load_denylist()
     name_res = [re.compile(r"\b" + re.escape(n) + r"\b", re.I) for n in names]
     if not names:
-        print("note: no denylist found; skipping the name gate")
+        print("note: denylist missing or empty; skipping the name gate")
     pages: dict[Path, Links] = {}
     for p in PUBLIC.rglob("*"):
         if not p.is_file():
