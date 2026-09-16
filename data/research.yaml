@@ -1,31 +1,31 @@
-- name: "Physics-Informed Neural Networks for Cold-Atom Sensors"
-  date: "September 2025 - Present"
-  desc: "A physics-informed neural network pipeline that infers phase winding and circulation transfer from noisy release-interference images of Bose-Einstein condensates, with a supervisory control loop that tunes parameters between runs for exponential readout precision gains in Sagnac-effect rotation sensors."
-  img: /images/bec-readout.png
-  url: "https://github.com/anishgoyal1108/BEC-PINN"
-
-- name: "Generalizable Zebrafish Control Models for Biomimetic Propulsion"
-  date: "June 2025 - Present"
-  desc: "Extends my zebrafish-derived propulsion work with live ECG data and a neural network control model that generalizes across water salinity, temperature, and viscosity for fish-sized autonomous submersibles. In press at Advances in Science, Technology and Engineering Systems."
-  img: /images/undulatory.png
-  url: "https://github.com/anishgoyal1108/Undulatory-Swimming-A-Topological-and-Computational-Model"
-
 - name: "ConcreteNet: A CNN for Deformity Detection in Ground-Penetrating Radar Images"
   date: "September 2024 - Present"
   desc: "A discriminative convolutional neural network for classifying rebars and structural defects in ground-penetrating radargrams, trained on scans from the Georgia Southern Engineering Research Building and now being field-tested by the Georgia Department of Transportation."
   img: /images/concretenet.jpg
   url: "https://github.com/anishgoyal1108/ConcreteNet"
 
+- name: "Physics-Informed Neural Networks for Cold-Atom Sensors"
+  date: "September 2025 - May 2026"
+  desc: "A physics-informed neural network pipeline that infers phase winding and circulation transfer from noisy release-interference images of Bose-Einstein condensates, with a supervisory control loop that tunes parameters between runs for exponential readout precision gains in Sagnac-effect rotation sensors."
+  img: /images/bec-readout.png
+  url: "https://github.com/anishgoyal1108/BEC-PINN"
+
+- name: "Generalizable Zebrafish Control Models for Biomimetic Propulsion"
+  date: "September 2024 - May 2025"
+  desc: "Extends my zebrafish-derived propulsion work with live ECG data and a neural network control model that generalizes across water salinity, temperature, and viscosity for fish-sized autonomous submersibles."
+  img: /images/undulatory.png
+  url: "https://github.com/anishgoyal1108/Undulatory-Swimming-A-Topological-and-Computational-Model"
+
 - name: "Double-target Bose-Einstein Condensate Atomtronic Rotation Sensor"
   date: "August 2024 - December 2024"
-  desc: "A proof-of-concept quantum rotation sensor for GPS-denied navigation that uses ultracold atoms shaped by light into coupled ring channels. I rewrote the rotating-frame Gross-Pitaevskii solver in Python and mapped the switching response across barrier strengths and rotation rates on an HPC cluster. Under review at Physical Review A."
+  desc: "A proof-of-concept quantum rotation sensor for GPS-denied navigation that uses ultracold atoms shaped by light into coupled ring channels. I rewrote the rotating-frame Gross-Pitaevskii solver in Python and mapped the switching response across barrier strengths and rotation rates on an HPC cluster."
   img: /images/bec-phase.png
   url: "https://arxiv.org/abs/2411.06585"
 
 - name: "Undulatory Swimming: A Topological and Computational Model"
   date: "October 2023 - April 2024"
   desc: "An energy-efficient biomimetic submersible with an autonomous propulsion system trained on Zebrafish electrocardiograph data."
-  img: /images/undulatory.png 
+  img: /images/undulatory.png
   url: "https://github.com/anishgoyal1108/Undulatory-Swimming-A-Topological-and-Computational-Model"
 
 - name: "Wireless Online Real-time Language Expression Yielder"
