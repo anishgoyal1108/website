@@ -332,3 +332,14 @@ body.lightbox-open { overflow: hidden; }
 .note-body table { display: block; overflow-x: auto; max-width: 100%; }
 .note-body mark { padding: 0 0.15em; }
 .note-body .callout-content table { display: table; }
+
+/* keep the simple.css button fill from swallowing filter and graph button labels */
+.notes-filter button, .notes-filter button:hover, .notes-filter button:focus, .notes-filter button.active,
+.graph-tools button, .graph-tools button:hover, .graph-tools button:focus, .graph-tools button.active {
+  background-color: var(--accent-bg) !important;
+  color: var(--text) !important;
+}
+.notes-filter button.active, .notes-filter button:hover, .graph-tools button.active, .graph-tools button:hover {
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
