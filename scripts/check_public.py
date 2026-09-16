@@ -13,6 +13,7 @@ import html
 import os
 import re
 import sys
+from urllib.parse import unquote
 from html.parser import HTMLParser
 from pathlib import Path
 
@@ -95,7 +96,7 @@ def main() -> int:
                     failures.append(f"raw wikilink brackets in {rel}")
     # link checker
     def exists(path: str) -> bool:
-        path = path.split("?")[0]
+        path = unquote(path.split("?")[0])
         target = PUBLIC / path.lstrip("/")
         return target.is_file() or (target / "index.html").is_file()
 

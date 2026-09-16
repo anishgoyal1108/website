@@ -138,10 +138,26 @@ def render_all(cfg, vault, media, scrubber, report, args) -> list[Path]:
     return wanted
 
 
+def _round_numbers(svg: str) -> str:
+    """Round path/point coordinates to 0.1 px; Excalidraw exports 3-4 decimals of freedraw outline."""
+    def rnd(m):
+        r = round(float(m.group(0)), 1)
+        return str(int(r)) if r == int(r) else f"{r:.1f}"
+
+    def fix(m):
+        return m.group(1) + re.sub(r"-?\d+\.\d+", rnd, m.group(2)) + '"'
+
+    svg = re.sub(r'(\sd=")([^"]*)"', fix, svg)
+    svg = re.sub(r'(\spoints=")([^"]*)"', fix, svg)
+    svg = re.sub(r'(\stransform=")([^"]*)"', fix, svg)
+    return svg
+
+
 def _postprocess(svg: str, digest: str) -> str:
     svg = re.sub(r"<!--\s*payload-(?:type|version|start|end)[\s\S]*?-->", "", svg)
     svg = re.sub(r"<!--\s*svg-source:excalidraw\s*-->", "", svg)
     svg = re.sub(r"<!--\s*payload:[\s\S]*?-->", "", svg)
     svg = re.sub(r"<\?xml[^>]*\?>\s*", "", svg)
     svg = re.sub(r"<!DOCTYPE[^>]*>\s*", "", svg)
+    svg = _round_numbers(svg)
     return f"<!-- scene:{digest} -->\n" + svg.strip() + "\n"
