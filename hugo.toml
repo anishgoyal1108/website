@@ -2,7 +2,7 @@
 baseURL = "https://anishgoyal.com"
 languageCode = "en-us"
 title = "Anish Goyal"
-copyright = "© 2024 Anish Goyal"
+copyright = "© 2026 Anish Goyal"
 enableEmoji = true
 rssLimit = 25
 ignoreFiles = [ ".obsidian", "templates" ]
