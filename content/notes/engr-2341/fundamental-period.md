@@ -15,10 +15,9 @@ subject: "electrical-engineering"
 kind: "concept"
 weight: 9008
 slug: "fundamental-period"
-links:
-  - "/notes/phys-2212/quantized/"
+links: []
 sources: []
 generated: true
 ---
 
-the smallest period of repetition for a waveform, $T_0$, which is <a class="internal-link" href="/notes/phys-2212/quantized/">quantized</a>
+the smallest period of repetition for a waveform, $T_0$, which is quantized

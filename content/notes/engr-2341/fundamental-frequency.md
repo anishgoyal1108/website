@@ -15,10 +15,9 @@ subject: "electrical-engineering"
 kind: "concept"
 weight: 9007
 slug: "fundamental-frequency"
-links:
-  - "/notes/phys-2212/quantized/"
+links: []
 sources: []
 generated: true
 ---
 
-the lowest frequency component of a periodic waveform, $\omega_0 = 2\pi f_{0}$, which is <a class="internal-link" href="/notes/phys-2212/quantized/">quantized</a>
+the lowest frequency component of a periodic waveform, $\omega_0 = 2\pi f_{0}$, which is quantized

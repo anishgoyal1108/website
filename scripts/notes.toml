@@ -133,15 +133,6 @@ group = "Electrical Engineering"
 folder = "04. Notes/Undergraduate Courses/EENG 5342"
 
 [[courses]]
-code = "PHYS 2212"
-slug = "phys-2212"
-title = "Principles of Physics II"
-term = "Spring 2025"
-subject = "physics"
-group = "Physics"
-folder = "04. Notes/Undergraduate Courses/PHYS 2212"
-
-[[courses]]
 code = "PHYS 3571"
 slug = "phys-3571"
 title = "Quantum Computing"

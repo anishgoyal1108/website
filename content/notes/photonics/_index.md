@@ -6,7 +6,7 @@ course_title: "Fundamentals of Photonics (Saleh & Teich)"
 subject: "physics"
 group: "Self-study"
 term: "Summer 2026"
-weight: 150
+weight: 140
 outputs:
   - "html"
 lectures: 1

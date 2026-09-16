@@ -6,7 +6,7 @@ course_title: "Fundamentals of Electric Circuits (Sadiku)"
 subject: "electrical-engineering"
 group: "Self-study"
 term: "Summer 2025"
-weight: 140
+weight: 130
 outputs:
   - "html"
 lectures: 8
