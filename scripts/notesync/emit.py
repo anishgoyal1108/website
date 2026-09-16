@@ -109,9 +109,11 @@ class Writer:
                 if course_slugs is not None and p.parent.name not in course_slugs and p.parent != root:
                     continue
                 try:
-                    head = p.read_text(encoding="utf-8")[:2000]
+                    text = p.read_text(encoding="utf-8")
                 except OSError:
                     continue
+                end = text.find("\n---", 4)
+                head = text[: end if end > 0 else 2000]
                 if GENERATED_MARK in head:
                     self.report.add("pruned", str(p.relative_to(root.parent.parent)))
                     self.changed += 1
