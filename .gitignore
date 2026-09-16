@@ -13,3 +13,5 @@ result
 result-*
 yarn.lock
 bun.lockb
+__pycache__/
+*.pyc

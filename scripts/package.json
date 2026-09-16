@@ -1,0 +1,9 @@
+{
+  "name": "website-notes-sync",
+  "private": true,
+  "type": "module",
+  "description": "Renders Excalidraw drawings to SVG for scripts/sync_notes.py",
+  "devDependencies": {
+    "playwright": "1.63.0"
+  }
+}
