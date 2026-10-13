@@ -343,3 +343,13 @@ body.lightbox-open { overflow: hidden; }
   color: var(--accent) !important;
   border-color: var(--accent) !important;
 }
+
+/* ---------- Home page photo and footer quote ---------- */
+.pfp { width: 28%; float: left; margin-right: 20px; margin-top: 5px; }
+.footer-quote { margin-bottom: -10px; }
+.footer-quote p { text-align: left; font-size: 1.2em; }
+@media (max-width: 720px) {
+  .pfp { display: block; float: none; width: 55%; max-width: 240px; margin: 0 auto 1rem; }
+  .footer-quote { margin-inline: 0.5rem; }
+  .footer-quote p { font-size: 1em; }
+}
