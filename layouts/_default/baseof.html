@@ -21,14 +21,14 @@
     {{- partial "seo_tags.html" . -}}
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
-    {{ $simple := resources.Get "simple.css" | minify }}
+    {{ $simple := resources.Get "simple.css" | minify | fingerprint }}
     <link href="{{ $simple.RelPermalink }}" rel="stylesheet" />
 
-    {{ $style := resources.Get "style.css" | minify }}
+    {{ $style := resources.Get "style.css" | minify | fingerprint }}
     <link href="{{ $style.RelPermalink }}" rel="stylesheet" />
 
     {{ with .Params.style }}
-      {{ $extra := resources.Get . | minify }}
+      {{ $extra := resources.Get . | minify | fingerprint }}
       <link href="{{ $extra.RelPermalink }}" rel="stylesheet" />
     {{ end }}
 
@@ -40,7 +40,7 @@
     {{ if .Param "math" }}
       {{ partialCached "math.html" . }}
     {{ end }}
-    {{ $lightbox := resources.Get "lightbox.js" | minify }}
+    {{ $lightbox := resources.Get "lightbox.js" | minify | fingerprint }}
     <script defer src="{{ $lightbox.RelPermalink }}"></script>
   </head>
 

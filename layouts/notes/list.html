@@ -28,6 +28,6 @@
       {{ end }}
     {{ end }}
   </content>
-  {{ $js := resources.Get "notes-filter.js" | minify }}
+  {{ $js := resources.Get "notes-filter.js" | minify | fingerprint }}
   <script defer src="{{ $js.RelPermalink }}"></script>
 {{ end }}

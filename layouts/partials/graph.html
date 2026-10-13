@@ -16,5 +16,5 @@
   <div class="graph-canvas"></div>
 </section>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
-{{ $js := resources.Get "graph.js" | minify }}
+{{ $js := resources.Get "graph.js" | minify | fingerprint }}
 <script defer src="{{ $js.RelPermalink }}"></script>
