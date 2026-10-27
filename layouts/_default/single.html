@@ -1,5 +1,8 @@
 {{ define "main" }}
   {{ partial "article-head.html" . }}
+  {{ partial "series.html" (dict "page" . "position" "top") }}
   <content class="post-body zoomable"> {{ .Content }} </content>
+  {{ partial "series.html" (dict "page" . "position" "bottom") }}
   {{ partial "graph.html" . }}
+  {{ if and (eq .Section "blog") (.Param "math") }}{{ partial "fit-math.html" . }}{{ end }}
 {{ end }}

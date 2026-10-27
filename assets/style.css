@@ -353,3 +353,30 @@ body.lightbox-open { overflow: hidden; }
   .footer-quote { margin-inline: 0.5rem; }
   .footer-quote p { font-size: 1em; }
 }
+
+/* ---------- Blog posts: sized figures, wide math and tables, series navigation ---------- */
+.post-body figure.sketch { margin: 1.5rem 0; overflow: visible; }
+.post-body figure.sketch a.zoom { margin: 0 auto; }
+.post-body figure.sketch img {
+  display: block; margin-inline: auto; max-width: 100%; height: auto;
+  border: none; border-radius: 0; opacity: 1;
+}
+.post-body mjx-container[display="true"] { max-width: 100%; }
+.post-body table.stacked,
+.post-body table.stacked thead,
+.post-body table.stacked tbody,
+.post-body table.stacked tr,
+.post-body table.stacked th,
+.post-body table.stacked td { display: block; width: auto; }
+.post-body table.stacked tr { margin-bottom: 0.75rem; }
+.post-body table.stacked th + th,
+.post-body table.stacked td + td { border-top: none; }
+@media only screen and (max-width: 720px) {
+  .post-body blockquote { margin-inline-start: 0.5rem; margin-inline-end: 0; }
+  .post-body figure.sketch img { width: 100% !important; }
+}
+details.series { margin-bottom: 0.5rem; }
+details.series summary { word-break: normal; overflow-wrap: anywhere; }
+details.series ol { margin-block: 0.5rem; }
+nav.series-nav { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem; margin-block: 2rem 1rem; }
+nav.series-nav a.next { margin-inline-start: auto; text-align: end; }

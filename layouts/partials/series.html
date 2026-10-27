@@ -1,0 +1,34 @@
+{{- $page := .page -}}
+{{- with $page.Params.series -}}
+  {{- $name := . -}}
+  {{- $parts := sort (where site.RegularPages "Params.series" $name) "Params.part" -}}
+  {{- $n := len $parts -}}
+  {{- $i := int $page.Params.part -}}
+  {{- if eq $.position "top" -}}
+    <details class="series">
+      <summary>Part {{ $i }} of {{ $n }} in <em>{{ $name }}</em></summary>
+      <ol>
+        {{- range $parts }}
+          <li>
+            {{- if eq .RelPermalink $page.RelPermalink -}}
+              <strong>{{ .LinkTitle | replaceRE `^.*?Part \d+: ` "" }}</strong>
+            {{- else -}}
+              <a href="{{ .RelPermalink }}">{{ .LinkTitle | replaceRE `^.*?Part \d+: ` "" }}</a>
+            {{- end -}}
+          </li>
+        {{- end }}
+      </ol>
+    </details>
+  {{- else -}}
+    <nav class="series-nav">
+      {{- range $parts }}
+        {{- if eq (int .Params.part) (sub $i 1) }}
+          <a class="prev" href="{{ .RelPermalink }}">← Part {{ .Params.part }}: {{ .LinkTitle | replaceRE `^.*?Part \d+: ` "" }}</a>
+        {{- end }}
+        {{- if eq (int .Params.part) (add $i 1) }}
+          <a class="next" href="{{ .RelPermalink }}">Part {{ .Params.part }}: {{ .LinkTitle | replaceRE `^.*?Part \d+: ` "" }} →</a>
+        {{- end }}
+      {{- end }}
+    </nav>
+  {{- end -}}
+{{- end -}}

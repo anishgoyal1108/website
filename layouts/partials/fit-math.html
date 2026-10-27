@@ -1,0 +1,45 @@
+<script>
+  (function () {
+    function availableWidth(el) {
+      var p = el.parentElement;
+      while (p && (getComputedStyle(p).display.indexOf('inline') === 0 || p.clientWidth === 0)) {
+        p = p.parentElement;
+      }
+      if (!p) return 0;
+      var cs = getComputedStyle(p);
+      return p.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    }
+    function shrinkToFit(el) {
+      el.style.fontSize = '';
+      var avail = availableWidth(el);
+      var need = el.scrollWidth;
+      if (avail > 0 && need > avail + 1) {
+        el.style.fontSize = Math.floor(avail / need * 1000) / 10 + '%';
+      }
+    }
+    function fit() {
+      document.querySelectorAll('.post-body table').forEach(function (t) {
+        t.classList.remove('stacked');
+        t.style.fontSize = '';
+        if (t.scrollWidth > availableWidth(t) + 1) t.classList.add('stacked');
+        shrinkToFit(t);
+      });
+      document.querySelectorAll('.post-body mjx-container[display="true"]').forEach(shrinkToFit);
+    }
+    var tries = 0;
+    (function wait() {
+      if (window.MathJax && MathJax.startup && MathJax.startup.promise) {
+        MathJax.startup.promise.then(function () {
+          fit();
+          var t;
+          window.addEventListener('resize', function () {
+            clearTimeout(t);
+            t = setTimeout(fit, 150);
+          });
+        });
+      } else if (tries++ < 400) {
+        setTimeout(wait, 50);
+      }
+    })();
+  })();
+</script>

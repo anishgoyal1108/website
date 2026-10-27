@@ -1,0 +1,19 @@
+{{- $alt := .PlainText -}}
+{{- $width := 0 -}}
+{{- with findRESubmatch `^(.*?)\|(\d+)$` $alt 1 -}}
+  {{- $alt = index (index . 0) 1 -}}
+  {{- $width = int (index (index . 0) 2) -}}
+{{- end -}}
+{{ if $width }}
+  <figure class="sketch">
+    <a class="zoom" href="{{ .Destination | safeURL }}"><img src="{{ .Destination | safeURL }}" alt="{{ $alt }}" loading="lazy" style="width: {{ math.Min 100 (div (mul $width 100.0) 700) }}%"></a>
+    {{ with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+  </figure>
+{{ else if .Title }}
+  <figure>
+    <a class="zoom" href="{{ .Destination | safeURL }}"><img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy"></a>
+    <figcaption>{{ .Title }}</figcaption>
+  </figure>
+{{ else }}
+  <a class="zoom" href="{{ .Destination | safeURL }}"><img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy"></a>
+{{ end }}
