@@ -11,12 +11,19 @@
   var depth = 1, showTags = true, data = null, sim = null;
 
   function load() {
+    var src = panel.dataset.src || "/graph.json";
+    var key = "graph-json:" + src;
     try {
-      var cached = sessionStorage.getItem("graph-json");
-      if (cached) return Promise.resolve(JSON.parse(cached));
+      sessionStorage.removeItem("graph-json");
+      var cached = sessionStorage.getItem(key);
+      if (cached) {
+        var d = JSON.parse(cached);
+        var hasCurrent = d.nodes.some(function (n) { return n.id === current; });
+        if (mode === "global" || hasCurrent) return Promise.resolve(d);
+      }
     } catch (e) {}
-    return fetch(panel.dataset.src || "/graph.json").then(function (r) { return r.json(); }).then(function (d) {
-      try { sessionStorage.setItem("graph-json", JSON.stringify(d)); } catch (e) {}
+    return fetch(src).then(function (r) { return r.json(); }).then(function (d) {
+      try { sessionStorage.setItem(key, JSON.stringify(d)); } catch (e) {}
       return d;
     });
   }
